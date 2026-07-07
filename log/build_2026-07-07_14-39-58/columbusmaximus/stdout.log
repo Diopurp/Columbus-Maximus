@@ -1,0 +1,21 @@
+running develop
+running egg_info
+creating columbusmaximus.egg-info
+writing columbusmaximus.egg-info/PKG-INFO
+writing dependency_links to columbusmaximus.egg-info/dependency_links.txt
+writing entry points to columbusmaximus.egg-info/entry_points.txt
+writing requirements to columbusmaximus.egg-info/requires.txt
+writing top-level names to columbusmaximus.egg-info/top_level.txt
+writing manifest file 'columbusmaximus.egg-info/SOURCES.txt'
+reading manifest file 'columbusmaximus.egg-info/SOURCES.txt'
+writing manifest file 'columbusmaximus.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/tejosh/cm_ws/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages/columbusmaximus.egg-link (link to .)
+
+Installed /home/tejosh/cm_ws/Columbus-Maximus/build/columbusmaximus
+running symlink_data
+creating /home/tejosh/cm_ws/Columbus-Maximus/install/columbusmaximus/share/ament_index
+creating /home/tejosh/cm_ws/Columbus-Maximus/install/columbusmaximus/share/ament_index/resource_index
+creating /home/tejosh/cm_ws/Columbus-Maximus/install/columbusmaximus/share/ament_index/resource_index/packages
+symbolically linking /home/tejosh/cm_ws/Columbus-Maximus/build/columbusmaximus/resource/columbusmaximus -> /home/tejosh/cm_ws/Columbus-Maximus/install/columbusmaximus/share/ament_index/resource_index/packages
+symbolically linking /home/tejosh/cm_ws/Columbus-Maximus/build/columbusmaximus/package.xml -> /home/tejosh/cm_ws/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus

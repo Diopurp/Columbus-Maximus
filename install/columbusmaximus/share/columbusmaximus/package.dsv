@@ -1,0 +1,9 @@
+source;share/columbusmaximus/hook/pythonpath.ps1
+source;share/columbusmaximus/hook/pythonpath.dsv
+source;share/columbusmaximus/hook/pythonpath.sh
+source;share/columbusmaximus/hook/ament_prefix_path.ps1
+source;share/columbusmaximus/hook/ament_prefix_path.dsv
+source;share/columbusmaximus/hook/ament_prefix_path.sh
+source;../../build/columbusmaximus/share/columbusmaximus/hook/pythonpath_develop.ps1
+source;../../build/columbusmaximus/share/columbusmaximus/hook/pythonpath_develop.dsv
+source;../../build/columbusmaximus/share/columbusmaximus/hook/pythonpath_develop.sh

@@ -1,0 +1,12 @@
+package.xml
+setup.cfg
+setup.py
+columbusmaximus/__init__.py
+columbusmaximus.egg-info/PKG-INFO
+columbusmaximus.egg-info/SOURCES.txt
+columbusmaximus.egg-info/dependency_links.txt
+columbusmaximus.egg-info/entry_points.txt
+columbusmaximus.egg-info/requires.txt
+columbusmaximus.egg-info/top_level.txt
+columbusmaximus.egg-info/zip-safe
+resource/columbusmaximus
