@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="columbusmaximus" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <!-- ===== Properties ===== -->
+  
   <xacro:property name="wheel_radius" value="0.05"/>
   <xacro:property name="wheel_length" value="0.04"/>
   <xacro:property name="wheel_offset_x" value="-0.10"/>
@@ -12,17 +12,15 @@
   <xacro:property name="caster_offset_x" value="0.15"/>
   <xacro:property name="caster_offset_z" value="-0.08"/>
 
-  <!-- ===== base_link: empty reference frame ===== -->
   <link name="base_link"></link>
 
-  <!-- ===== Fixed joint: base_link -> chassis ===== -->
+
   <joint name="chassis_joint" type="fixed">
     <parent link="base_link"/>
     <child link="chassis"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
 
-  <!-- ===== chassis: your STL mesh lives here ===== -->
   <link name="chassis">
     <visual>
       <geometry>
@@ -45,68 +43,5 @@
     </inertial>
   </link>
 
-  <!-- ===== Drive wheel macro (left + right, continuous joints, attached to chassis) ===== -->
-  <xacro:macro name="drive_wheel" params="prefix y_offset">
-    <link name="${prefix}_wheel">
-      <visual>
-        <geometry>
-          <cylinder radius="${wheel_radius}" length="${wheel_length}"/>
-        </geometry>
-        <material name="black">
-          <color rgba="0.1 0.1 0.1 1"/>
-        </material>
-      </visual>
-      <collision>
-        <geometry>
-          <cylinder radius="${wheel_radius}" length="${wheel_length}"/>
-        </geometry>
-      </collision>
-      <inertial>
-        <mass value="0.05"/>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <inertia ixx="0.00002708" ixy="0.0" ixz="0.0"
-                 iyy="0.00002708" iyz="0.0" izz="0.0000625"/>
-      </inertial>
-    </link>
-
-    <joint name="chassis_to_${prefix}_wheel" type="continuous">
-      <parent link="chassis"/>
-      <child link="${prefix}_wheel"/>
-      <origin xyz="${wheel_offset_x} ${y_offset} ${wheel_offset_z}" rpy="1.5708 0 0"/>
-      <axis xyz="0 0 1"/>
-    </joint>
-  </xacro:macro>
-
-  <xacro:drive_wheel prefix="left"  y_offset="${wheel_offset_y}"/>
-  <xacro:drive_wheel prefix="right" y_offset="${-wheel_offset_y}"/>
-
-  <!-- ===== Caster wheel (passive, attached to chassis) ===== -->
-  <link name="caster_wheel">
-    <visual>
-      <geometry>
-        <sphere radius="${caster_radius}"/>
-      </geometry>
-      <material name="black">
-        <color rgba="0.1 0.1 0.1 1"/>
-      </material>
-    </visual>
-    <collision>
-      <geometry>
-        <sphere radius="${caster_radius}"/>
-      </geometry>
-    </collision>
-    <inertial>
-      <mass value="0.02"/>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <inertia ixx="0.0000032" ixy="0.0" ixz="0.0"
-               iyy="0.0000032" iyz="0.0" izz="0.0000032"/>
-    </inertial>
-  </link>
-
-  <joint name="chassis_to_caster_wheel" type="fixed">
-    <parent link="chassis"/>
-    <child link="caster_wheel"/>
-    <origin xyz="${caster_offset_x} 0 ${caster_offset_z}" rpy="0 0 0"/>
-  </joint>
-
+ 
 </robot>
