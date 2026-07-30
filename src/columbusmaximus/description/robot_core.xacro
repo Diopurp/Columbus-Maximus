@@ -27,6 +27,7 @@
       <origin xyz="0.07193 -0.01172 0" rpy="0 0 ${pi/2}"/>
       <geometry>
         <mesh filename="package://columbusmaximus/meshes/Assembly_1.stl" scale="0.001 0.001 0.001"/>
+        <!--<box size="0.216 0.268 0.2"/>-->
       </geometry>
     </collision>
     <inertial>
@@ -63,7 +64,7 @@
   <joint name="chassis_to_left_wheel" type="continuous">
     <parent link="chassis"/>
     <child link="left_wheel"/>
-    <origin xyz="0 0.122 0" rpy="1.5708 0 0"/>
+    <origin xyz="0 0.122 0" rpy="-1.5708 0 0"/>
     <axis xyz="0 0 1"/>
   </joint>
 
@@ -95,7 +96,7 @@
     <parent link="chassis"/>
     <child link="right_wheel"/>
     <origin xyz="0 -0.122 0" rpy="1.5708 0 0"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="0 0 -1"/>
   </joint>
 
   <!-- ===== Caster wheel===== -->
@@ -126,5 +127,10 @@
     <child link="caster_wheel"/>
     <origin xyz="${caster_offset_x} 0 ${caster_offset_z}" rpy="0 0 0"/>
   </joint>
+
+  <gazebo reference="caster_wheel">
+    <mu1>0.001</mu1>
+    <mu2>0.001</mu2>
+   </gazebo> 
 
 </robot>
