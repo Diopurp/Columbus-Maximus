@@ -1,9 +1,46 @@
+"""
+UWB Trilateration Tracker — Logic 1 + Block Downsampling (Full 4-Anchor, Batched)
+This is to reduce and refresh rate and get more accurate readings.
+--------------------------------------------------------------------------------
+Reads live ranging data from 4 UWB anchors over serial and computes the
+tag's 2D position (x, y) in centimeters.
+
+Approach:
+  - No sub-grouping: builds ALL 6 pairwise-subtracted range equations
+    across the 4 anchors into a single 6x2 system, solved via least
+    squares (np.linalg.lstsq) — same core math as the unfiltered
+    Full-4-Anchor variant.
+  - Adds a batching stage: raw distance readings are buffered per
+    anchor. Once a GLOBAL total of 10 successful readings (summed
+    across all anchors combined) has arrived, each anchor's buffer is
+    averaged into current_distances, a position is computed, and all
+    buffers + the counter are reset.
+
+Robustness:
+  - Tracks per-anchor online/offline status via RX_TIMEOUT messages;
+    clears that anchor's pending buffer if it drops.
+  - Prints BATCH FAILED if fewer than 3 anchors have data by the time
+    a block completes.
+
+KNOWN ISSUES:
+  1. The 10-reading block trigger counts readings GLOBALLY, not
+     per-anchor — so anchors reporting at different rates end up
+     averaged over very different sample counts within the same block
+     (e.g. one anchor smoothed over 7 samples, another over 1). This
+     makes per-block noise reduction inconsistent and anchor-dependent.
+     Fix: track reading_count per anchor and trigger only when all
+     online anchors have reached the target count.
+  2. Same zero-substitution issue as the unfiltered Full-4-Anchor
+     version: missing anchors are filled with 0.0 distance rather than
+     removed from the pairwise equation system, corrupting the
+     3-anchor fallback solve.
+"""
 import numpy as np
 import re
 import serial
 
 # --- 1. HARDWARE CONFIGURATION ---
-SERIAL_PORT = "/dev/ttyACM0"  # Verified by your debug.py
+SERIAL_PORT = "/dev/ttyACM0"  # Verified by ls /dev/ttyACM* command on Linux or check Device Manager on Windows
 BAUD_RATE = 115200
 
 try:
@@ -16,21 +53,21 @@ except Exception as e:
     print(f"Details: {e}")
     exit()
 
-# Define your 4 Anchors in Centimeters (30x30 meters = 3000x3000 cm)
+# Define your 4 Anchors in Centimeters i.e. place them on vertices of a square arrangement of side 200cm here. The order of anchors is important and must match the MAC address mapping below.
 anchors = np.array(
     [
-        [0.0, 0.0],  # Anchor 0 (MAC: 0x0001)
-        [200.0, 0.0],  # Anchor 1 (MAC: 0x0002)
-        [0.0, 200.0],  # Anchor 2 (MAC: 0x0003)
-        [200.0, 200.0],  # Anchor 3 (MAC: 0x0004)
+        [0.0, 0.0],  # Anchor 0 (MAC: 0x0001) - 0
+        [200.0, 0.0],  # Anchor 1 (MAC: 0x0002) - 2
+        [0.0, 200.0],  # Anchor 2 (MAC: 0x0003) - 4
+        [200.0, 200.0],  # Anchor 3 (MAC: 0x0004) - 10
     ]
 )
 num_anchors = len(anchors)
 
-# Map MAC address strings to internal indexes
+# Dictionary that maps MAC address strings to internal indexes
 mac_to_index = {"0x0001": 0, "0x0002": 1, "0x0003": 2, "0x0004": 3}
 
-# Live health tracker (True = Online, False = Offline)
+# Live health tracker (True = Online, False = Offline). It is a dictionary with mac being a dynamic view object containing all the keys in the dictionary.
 anchor_health = {mac: False for mac in mac_to_index.keys()}
 
 # Memory buffers: Holds distinct raw reading groups for block averaging

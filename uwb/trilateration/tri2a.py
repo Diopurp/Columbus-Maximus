@@ -1,9 +1,38 @@
+"""
+UWB Trilateration Tracker — Logic 2: Sub-Group Cramer's Rule Averaging
+-------------------------------------------------------------------------
+Reads live ranging data from 4 UWB anchors over serial and computes the
+tag's 2D position (x, y) in centimeters.
+
+Approach:
+  - Splits the 4 anchors into 3 overlapping triads (Groups 123, 234, 134),
+    each with one anchor chosen as reference.
+  - For each triad, linearizes the trilateration equations by subtracting
+    the reference anchor's range equation from the other two, eliminating
+    the quadratic term and leaving a 2x2 linear system in (x, y).
+  - Solves each triad's system EXACTLY via Cramer's determinant rule
+    (no least-squares, no iteration) — discards a group if its
+    determinant is near-zero (degenerate/near-parallel geometry).
+  - Averages the (x, y) results from however many of the 3 groups solved
+    successfully to produce the final position estimate.
+
+Robustness:
+  - Tracks per-anchor online/offline status via RX_TIMEOUT messages.
+  - Holds last-known distance per anchor so a group can still solve even
+    if a DIFFERENT anchor (outside that group) is temporarily offline.
+  - No temporal smoothing filter — each serial update produces an
+    immediate, independent position estimate.
+
+Note: exact (non-least-squares) solve per group means a single noisy
+anchor directly corrupts every group it belongs to; the only noise
+reduction happens at the final cross-group averaging step.
+"""
 import re
 import numpy as np
 import serial
 
 # --- 1. HARDWARE CONFIGURATION ---
-SERIAL_PORT = "/dev/ttyACM0"   # Your verified serial port
+SERIAL_PORT = "/dev/ttyACM0"   # Verify from your terminal with 'ls /dev/tty*' command
 BAUD_RATE = 115200
 
 try:
@@ -18,10 +47,10 @@ except Exception as e:
 
 # Define your 4 Anchors in Centimeters 
 anchors = np.array([
-    [0.0, 0.0],       # Anchor 0 (MAC: 0x0001) - Index 0
-    [200.0, 0.0],      # Anchor 1 (MAC: 0x0002) - Index 1
-    [0.0, 200.0],      # Anchor 2 (MAC: 0x0003) - Index 2
-    [200.0, 200.0]      # Anchor 3 (MAC: 0x0004) - Index 3
+    [0.0, 0.0],       # Anchor 0 (MAC: 0x0001) -  0
+    [200.0, 0.0],      # Anchor 1 (MAC: 0x0002) -  2
+    [0.0, 200.0],      # Anchor 2 (MAC: 0x0003) -  4
+    [200.0, 200.0]      # Anchor 3 (MAC: 0x0004) -  10
 ])
 num_anchors = len(anchors)
 
@@ -117,7 +146,7 @@ try:
                 ref_idx = g["ref"]
                 other1, other2 = g["others"]
                 
-                # Check if all 3 anchors needed for THIS specific group are currently online
+                # Check if all 3 anchors needed for this specific group are currently online
                 if (current_distances[ref_idx] is not None and 
                     current_distances[other1] is not None and 
                     current_distances[other2] is not None):

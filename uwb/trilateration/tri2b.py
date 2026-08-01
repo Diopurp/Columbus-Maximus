@@ -1,9 +1,40 @@
+"""
+UWB Trilateration Tracker — Logic 2: Hybrid Sub-Group Least Squares (All-Pairs)
+--------------------------------------------------------------------------------
+Reads live ranging data from 4 UWB anchors over serial and computes the
+tag's 2D position (x, y) in centimeters.
+
+Approach:
+  - Splits the 4 anchors into 3 overlapping triads (Groups 123, 234, 134).
+  - For each triad, forms ALL 3 pairwise-subtracted range equations
+    (A-B, A-C, B-C) rather than picking a single reference anchor —
+    this makes each triad's local system overdetermined (3 equations,
+    2 unknowns).
+  - Solves each triad's overdetermined system via least squares
+    (np.linalg.lstsq), letting the redundant equation help average out
+    noise within the group itself.
+  - Averages the (x, y) results from however many of the 3 groups solved
+    successfully (anchors online) to produce the final position estimate.
+
+Robustness:
+  - Tracks per-anchor online/offline status via RX_TIMEOUT messages.
+  - Holds last-known distance per anchor so a group can still solve even
+    if a DIFFERENT anchor (outside that group) is temporarily offline.
+  - No temporal smoothing filter — each serial update produces an
+    immediate, independent position estimate.
+
+Note: unlike an exact 2-equation solve, the extra pairwise equation per
+group provides local (spatial) noise averaging before the cross-group
+average is taken — generally more robust to a single noisy anchor than
+a purely exact reference-anchor solve, at a small extra compute cost.
+"""
+
 import numpy as np
 import re
 import serial
 
 # --- 1. HARDWARE CONFIGURATION ---
-SERIAL_PORT = "/dev/ttyACM0"
+SERIAL_PORT = "/dev/ttyACM0" # Verified by ls /dev/ttyACM* command on Linux or check Device Manager on Windows
 BAUD_RATE = 115200
 
 try:
@@ -18,13 +49,13 @@ except Exception as e:
     print(f"Details: {e}")
     exit()
 
-# Define your 4 Anchors in Centimeters (60cm Desk Layout)
+# Define your 4 Anchors in Centimeters i.e. place them on vertices of a square arrangement of side 200cm here. The order of anchors is important and must match the MAC address mapping below.
 anchors = np.array(
     [
-        [0.0, 0.0],  # Anchor index 0 (MAC: 0x0001) - Bottom Left
-        [0.0, 60.0],  # Anchor index 1 (MAC: 0x0003) - Top Left (ALIGNED CHANNELS)
-        [60.0, 0.0],  # Anchor index 2 (MAC: 0x0002) - Bottom Right (ALIGNED CHANNELS)
-        [60.0, 60.0],  # Anchor index 3 (MAC: 0x0004) - Top Right
+        [0.0, 0.0],  # Anchor index 0 (MAC: 0x0001) -  0
+        [0.0, 200.0],  # Anchor index 1 (MAC: 0x0002) -  2
+        [200.0, 0.0],  # Anchor index 2 (MAC: 0x0003) -  4
+        [200.0, 200.0],  # Anchor index 3 (MAC: 0x0004) -  10
     ]
 )
 num_anchors = len(anchors)

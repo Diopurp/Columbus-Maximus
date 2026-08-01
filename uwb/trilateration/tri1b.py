@@ -1,3 +1,37 @@
+"""
+UWB Trilateration Tracker — Logic 3 + Sliding Moving Average (Window = 10)
+--------------------------------------------------------------------------------
+Reads live ranging data from 4 UWB anchors over serial and computes the
+tag's 2D position (x, y) in centimeters.
+
+Approach:
+  - No sub-grouping: builds ALL 6 pairwise-subtracted range equations
+    across the 4 anchors into a single 6x2 system, solved via least
+    squares (np.linalg.lstsq) — same core math as the other Full-4-Anchor
+    variants.
+  - Smoothing uses a TRUE sliding moving average (collections.deque with
+    maxlen=10) per anchor, not a tumbling block: every new raw reading is
+    appended and the oldest one automatically drops once the deque hits
+    10 items. The mean is recomputed from the current deque contents on
+    EVERY serial line received, so the position output keeps updating in
+    real time while still being noise-damped (no block-wait latency).
+
+Robustness:
+  - Tracks per-anchor online/offline status via RX_TIMEOUT messages;
+    clears that anchor's sliding history if it drops.
+  - Requires at least 3 anchors to have accumulated >=3 historical
+    readings before computing a position.
+
+KNOWN ISSUE: the valid_count check only confirms that 3+ anchors have
+>=3 readings in their deque — it does NOT confirm all 4 anchors are
+represented. Any anchor with an empty deque (offline / not yet reporting)
+gets smoothed_distances[idx] = 0.0, and since A/pair_indices assume all
+4 anchors, that fake zero-distance still gets folded into every pair
+involving it — same zero-substitution corruption as the other Full-4-
+Anchor scripts. Fix: dynamically build A/b only from anchors with a
+non-empty (or >=3-length) history, same pattern as the corrected
+multilateration script.
+"""
 import collections
 import re
 import numpy as np
@@ -19,10 +53,10 @@ except Exception as e:
 
 # Anchors defined strictly in Centimeters 
 anchors = np.array([
-    [0.0, 0.0],       # Anchor 0 (MAC: 0x0001) - Bottom Left
-    [60.0, 0.0],      # Anchor 1 (MAC: 0x0002) - Bottom Right
-    [0.0, 60.0],      # Anchor 2 (MAC: 0x0003) - Top Left
-    [60.0, 60.0]      # Anchor 3 (MAC: 0x0004) - Top Right
+    [0.0, 0.0],       # Anchor 0 (MAC: 0x0001) - Bottom Left - 0
+    [200.0, 0.0],      # Anchor 1 (MAC: 0x0002) - Bottom Right - 2
+    [0.0, 200.0],      # Anchor 2 (MAC: 0x0003) - Top Left - 4
+    [200.0, 200.0]      # Anchor 3 (MAC: 0x0004) - Top Right - 10
 ])
 num_anchors = len(anchors)
 
@@ -38,9 +72,9 @@ mac_to_index = {  #this dictionary allows us to quickly convert a MAC address st
 anchor_health = {mac: False for mac in mac_to_index.keys()}
 
 # --- MOVING AVERAGE CONFIGURATION ---
-WINDOW_SIZE = 5
+WINDOW_SIZE = 10
 # Create a sliding history memory list for each of the 4 anchors.
-# 'maxlen=5' means when item #6 arrives, item #1 is pushed out automatically.
+# 'maxlen=10' means when item #11 arrives, item #1 is pushed out automatically.
 history = [collections.deque(maxlen=WINDOW_SIZE) for _ in range(num_anchors)]
 
 # --- 2. OPTIMIZATION: PRE-CALCULATE STATIC PROPERTIES ---

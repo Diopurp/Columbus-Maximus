@@ -1,9 +1,36 @@
+"""
+UWB Trilateration Tracker — Logic 1: Full 4-Anchor Combined Least Squares
+--------------------------------------------------------------------------------
+Reads live ranging data from 4 UWB anchors over serial and computes the
+tag's 2D position (x, y) in centimeters.
+
+Approach:
+  - No sub-grouping: builds ALL 6 pairwise-subtracted range equations
+    across the 4 anchors (C(4,2) = 6) into a single 6x2 system.
+  - Solves the full overdetermined system in one least-squares call
+    (np.linalg.lstsq) to get (x, y) directly — no cross-group averaging
+    step, since there's only one combined group.
+  - No temporal smoothing filter — each serial update produces an
+    immediate position estimate straight from the raw readings.
+
+Robustness:
+  - Tracks per-anchor online/offline status via RX_TIMEOUT messages.
+  - Requires at least 3 of 4 anchors to have a valid reading before
+    computing a position.
+
+KNOWN ISSUE: when fewer than 4 anchors are online, missing distances are
+substituted with 0.0 rather than removing that anchor's equations from
+the system. This means the 3-anchor fallback path currently injects
+fake zero-range data into the solve instead of cleanly dropping the
+affected pairs — needs fixing to dynamically rebuild A/b from only the
+currently-valid anchors.
+"""
 import numpy as np
 import re
 import serial
 
 # --- 1. HARDWARE CONFIGURATION ---
-SERIAL_PORT = "/dev/ttyACM0"  # Verified by your debug.py
+SERIAL_PORT = "/dev/ttyACM0"  # Verified by ls /dev/ttyACM* command on Linux or check Device Manager on Windows
 BAUD_RATE = 115200
 
 try:
@@ -16,24 +43,24 @@ except Exception as e:
     print(f"Details: {e}")
     exit()
 
-# Define your 4 Anchors in Centimeters (30x30 meters = 3000x3000 cm)
+# Define your 4 Anchors in Centimeters i.e. place them on vertices of a square arrangement of side 200cm here. The order of anchors is important and must match the MAC address mapping below.
 anchors = np.array(
     [
-        [0.0, 0.0],  # Anchor 0 (MAC: 0x0001)
-        [200.0, 0.0],  # Anchor 1 (MAC: 0x0002)
-        [0.0, 200.0],  # Anchor 2 (MAC: 0x0003)
-        [200.0, 200.0],  # Anchor 3 (MAC: 0x0004)
+        [0.0, 0.0],  # Anchor 0 (MAC: 0x0001) - 0
+        [200.0, 0.0],  # Anchor 1 (MAC: 0x0002) - 2
+        [0.0, 200.0],  # Anchor 2 (MAC: 0x0003) - 4
+        [200.0, 200.0],  # Anchor 3 (MAC: 0x0004) - 10
     ]
 )
 num_anchors = len(anchors)
 
-# Map MAC address strings to internal indexes
+# Dictionary maps MAC address strings to internal indexes
 mac_to_index = {"0x0001": 0, "0x0002": 1, "0x0003": 2, "0x0004": 3}
 
 # Live health tracker (True = Online, False = Offline)
-anchor_health = {mac: False for mac in mac_to_index.keys()}
+anchor_health = {mac: False for mac in mac_to_index.keys()} #This is also a dictionary with mac being a dynamic view object containing all the keys in the dictionary.
 
-# Memory buffer: Stores the last known valid distance for each anchor
+# Memory buffer: Stores the last known valid distance for each anchor (list of floats or None if no valid reading has been received yet)
 current_distances = [None, None, None, None]
 
 # --- 2. OPTIMIZATION: PRE-CALCULATE STATIC PROPERTIES ---
