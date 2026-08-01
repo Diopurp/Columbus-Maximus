@@ -5,6 +5,22 @@
   <xacro:property name="caster_offset_x" value="0.12"/>
   <xacro:property name="caster_offset_z" value="-0.02"/>
 
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+
+   <material name="blue">
+    <color rgba="0 0 1 1"/>
+  </material>
+
+   <material name="red ">
+    <color rgba="1 0 0 1"/>
+  </material>
+
+  <material name="grey ">
+    <color rgba="0.6 0.6 0.6 1"/>
+  </material>
+
   <link name="base_link"></link>
 
   <joint name="chassis_joint" type="fixed">
@@ -38,6 +54,10 @@
     </inertial>
   </link>
 
+  <gazebo reference="chassis">
+    <material>Gazebo/Grey</material>
+  </gazebo>  
+
   <!-- ===== Left wheel===== -->
   <link name="left_wheel">
     <visual>
@@ -67,6 +87,10 @@
     <origin xyz="0 0.122 0" rpy="-1.5708 0 0"/>
     <axis xyz="0 0 1"/>
   </joint>
+
+  <gazebo reference="left_wheel">
+    <material>Gazebo/Black</material>
+  </gazebo> 
 
   <!-- ===== Right wheel===== -->
 
@@ -98,6 +122,10 @@
     <origin xyz="0 -0.122 0" rpy="1.5708 0 0"/>
     <axis xyz="0 0 -1"/>
   </joint>
+
+  <gazebo reference="right_wheel">
+    <material>Gazebo/Black</material>
+  </gazebo>
 
   <!-- ===== Caster wheel===== -->
   <link name="caster_wheel">
@@ -131,6 +159,8 @@
   <gazebo reference="caster_wheel">
     <mu1>0.001</mu1>
     <mu2>0.001</mu2>
+    <material>Gazebo/Black</material>
    </gazebo> 
+
 
 </robot>
