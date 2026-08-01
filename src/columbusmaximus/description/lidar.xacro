@@ -32,7 +32,7 @@
 
             <visualize>true</visualize>
 
-            <update_rate>10</update_rate>
+            <update_rate>5</update_rate>
 
             <ray>
                 <scan>

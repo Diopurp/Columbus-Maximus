@@ -123,6 +123,15 @@
     <axis xyz="0 0 -1"/>
   </joint>
 
+  <joint name = "base_footprint_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="base_footprint"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="base_footprint">
+   </link> 
+
   <gazebo reference="right_wheel">
     <material>Gazebo/Black</material>
   </gazebo>
@@ -143,7 +152,7 @@
       </geometry>
     </collision>
     <inertial>
-      <mass value="0.02"/>
+      <mass value="0.5"/>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <inertia ixx="0.0000032" ixy="0.0" ixz="0.0"
                iyy="0.0000032" iyz="0.0" izz="0.0000032"/>
