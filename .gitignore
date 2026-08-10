@@ -1,0 +1,14 @@
+# ESP-IDF generated files
+**/build/
+**/sdkconfig.old
+**/dependencies.lock
+
+# Python generated files
+__pycache__/
+*.pyc
+*.pyo
+
+# ROS 2 generated files
+install/
+log/
+

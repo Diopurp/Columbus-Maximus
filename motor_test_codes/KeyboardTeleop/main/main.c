@@ -13,7 +13,7 @@
 #define RIGHT_DIR_PIN   GPIO_NUM_16 //RX2
 
 #define MAX_SPEED       255
-#define TURN_SPEED      120
+#define TURN_SPEED      255
 
 void app_main(void)
 {
