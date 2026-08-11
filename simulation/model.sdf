@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="columbusmaximus">
+    <static>true</static>
+    <link name="dummy"/>
+  </model>
+</sdf>
