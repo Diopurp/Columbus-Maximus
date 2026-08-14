@@ -16,7 +16,7 @@ class UWBTrilaterationNode(Node):
         self.publisher_ = self.create_publisher(Point, 'uwb_pose', 10)
         self.anchor_marker_pub = self.create_publisher(MarkerArray, 'anchor_markers', 10)
         self.tag_marker_pub = self.create_publisher(Marker, 'tag_marker', 10)
-        self.lines_pub = self.create_publisher(Marker, 'tag_to_anchor_lines', 10)
+        # self.lines_pub = self.create_publisher(Marker, 'tag_to_anchor_lines', 10)
         self.path_pub = self.create_publisher(Path, 'tag_path', 10)
 
         # --- HARDWARE CONFIGURATION ---
@@ -56,7 +56,7 @@ class UWBTrilaterationNode(Node):
         self.max_path_length = 300
 
         # anchors are static -> publish once, not on the timer
-        self.publish_anchor_markers()
+        self.anchor_timer = self.create_timer(2.0, self.publish_anchor_markers)
 
         self.timer = self.create_timer(0.001, self.read_and_process)
 
@@ -79,6 +79,22 @@ class UWBTrilaterationNode(Node):
             sphere.color.r, sphere.color.g, sphere.color.b, sphere.color.a = 1.0, 0.0, 0.0, 1.0
             marker_array.markers.append(sphere)
 
+            label = Marker()
+            label.header.frame_id = "world"
+            label.header.stamp = self.get_clock().now().to_msg()
+            label.ns = "anchor_labels"
+            label.id = idx
+            label.type = Marker.TEXT_VIEW_FACING
+            label.action = Marker.ADD
+            label.pose.position.x = x / 100.0
+            label.pose.position.y = y / 100.0
+            label.pose.position.z = 0.3
+            label.pose.orientation.w = 1.0
+            label.scale.z = 0.2
+            label.color.r, label.color.g, label.color.b, label.color.a = 1.0, 1.0, 1.0, 1.0
+            label.text = f"Anchor {idx}"
+            marker_array.markers.append(label)
+
         line = Marker()
         line.header.frame_id = "world"
         line.header.stamp = self.get_clock().now().to_msg()
@@ -87,9 +103,10 @@ class UWBTrilaterationNode(Node):
         line.type = Marker.LINE_STRIP
         line.action = Marker.ADD
         line.scale.x = 0.02
-        line.color.r, line.color.g, line.color.b, line.color.a = 0.0, 1.0, 0.0, 1.0
+        line.color.r, line.color.g, line.color.b, line.color.a = 1.0, 1.0, 0.0, 1.0
 
-        for (x, y) in list(self.anchors) + [self.anchors[0]]:
+        outline_order = [self.anchors[0], self.anchors[1], self.anchors[3], self.anchors[2], self.anchors[0]]
+        for (x, y) in outline_order:
             p = Point()
             p.x, p.y, p.z = x / 100.0, y / 100.0, 0.0
             line.points.append(p)
@@ -113,21 +130,21 @@ class UWBTrilaterationNode(Node):
         tag_marker.color.r, tag_marker.color.g, tag_marker.color.b, tag_marker.color.a = 0.0, 0.0, 1.0, 1.0
         self.tag_marker_pub.publish(tag_marker)
 
-        lines_to_anchors = Marker()
-        lines_to_anchors.header.frame_id = "world"
-        lines_to_anchors.header.stamp = self.get_clock().now().to_msg()
-        lines_to_anchors.ns = "tag_to_anchor_lines"
-        lines_to_anchors.id = 200
-        lines_to_anchors.type = Marker.LINE_LIST
-        lines_to_anchors.action = Marker.ADD
-        lines_to_anchors.scale.x = 0.01
-        lines_to_anchors.color.r, lines_to_anchors.color.g, lines_to_anchors.color.b, lines_to_anchors.color.a = 1.0, 1.0, 0.0, 0.6
+        # lines_to_anchors = Marker()
+        # lines_to_anchors.header.frame_id = "world"
+        # lines_to_anchors.header.stamp = self.get_clock().now().to_msg()
+        # lines_to_anchors.ns = "tag_to_anchor_lines"
+        # lines_to_anchors.id = 200
+        # lines_to_anchors.type = Marker.LINE_LIST
+        # lines_to_anchors.action = Marker.ADD
+        # lines_to_anchors.scale.x = 0.01
+        # lines_to_anchors.color.r, lines_to_anchors.color.g, lines_to_anchors.color.b, lines_to_anchors.color.a = 1.0, 1.0, 0.0, 0.6
 
-        for (ax, ay) in self.anchors:
-            lines_to_anchors.points.append(Point(x=tag_x, y=tag_y, z=0.0))
-            lines_to_anchors.points.append(Point(x=ax / 100.0, y=ay / 100.0, z=0.0))
+        # for (ax, ay) in self.anchors:
+        #     lines_to_anchors.points.append(Point(x=tag_x, y=tag_y, z=0.0))
+        #     lines_to_anchors.points.append(Point(x=ax / 100.0, y=ay / 100.0, z=0.0))
 
-        self.lines_pub.publish(lines_to_anchors)
+        # self.lines_pub.publish(lines_to_anchors)
 
         pose = PoseStamped()
         pose.header.frame_id = "world"
