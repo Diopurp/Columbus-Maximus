@@ -11,6 +11,12 @@
 #define RIGHT_PWM_GPIO      16  // ESP32 board: RX2
 #define RIGHT_DIR_GPIO      17  // ESP32 board: TX2
 
+#define LEFT_MIN_PWM     90    // duty below which the left wheel won't start moving — tune this
+#define LEFT_PWM_SCALE   1.5f  // left needs proportionally more duty to match right's output — tune this
+
+#define RIGHT_MIN_PWM    20    // right starts moving easily — small floor mostly for safety margin
+#define RIGHT_PWM_SCALE  1.0f  // right is your baseline — no boost needed
+
 #define PWM_FREQUENCY       20000
 #define PWM_RESOLUTION      LEDC_TIMER_8_BIT
 #define PWM_MAX             255
@@ -24,7 +30,7 @@
 #define RIGHT_PWM_CHANNEL   LEDC_CHANNEL_1
 
 
-static int velocity_to_pwm(float velocity)
+static int velocity_to_pwm(float velocity, int min_pwm, float scale)
 {
     if (velocity < 0.0f)
     {
@@ -36,15 +42,26 @@ static int velocity_to_pwm(float velocity)
         return PWM_MAX;
     }
 
-    return (int)(
-        (velocity / MAX_WHEEL_SPEED_MPS) * PWM_MAX
+    int pwm = (int)(
+        (velocity / MAX_WHEEL_SPEED_MPS) * PWM_MAX * scale
     );
-}
 
+    if (pwm > PWM_MAX)
+    {
+        pwm = PWM_MAX;
+    }
+
+    if (pwm > 0 && pwm < min_pwm)
+    {
+        pwm = min_pwm;
+    }
+
+    return pwm;
+}
 
 static void set_left_motor(float velocity)
 {
-    int pwm = velocity_to_pwm(velocity);
+    int pwm = velocity_to_pwm(velocity, LEFT_MIN_PWM, LEFT_PWM_SCALE);
 
     if (velocity >= 0.0f)
     {
@@ -67,11 +84,10 @@ static void set_left_motor(float velocity)
     );
 }
 
-
 static void set_right_motor(float velocity)
 {
-    int pwm = velocity_to_pwm(velocity);
-
+    int pwm = velocity_to_pwm(velocity, RIGHT_MIN_PWM, RIGHT_PWM_SCALE);
+    
     if (velocity >= 0.0f)
     {
         gpio_set_level(RIGHT_DIR_GPIO, 1);
