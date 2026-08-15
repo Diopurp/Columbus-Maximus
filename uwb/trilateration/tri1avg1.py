@@ -1,0 +1,186 @@
+"""
+UWB Trilateration Tracker — Logic 1 + Block Downsampling (Full 4-Anchor, Batched)
+This is to reduce and refresh rate and get more accurate readings.
+--------------------------------------------------------------------------------
+Reads live ranging data from 4 UWB anchors over serial and computes the
+tag's 2D position (x, y) in centimeters.
+
+Approach:
+  - No sub-grouping: builds ALL 6 pairwise-subtracted range equations
+    across the 4 anchors into a single 6x2 system, solved via least
+    squares (np.linalg.lstsq) — same core math as the unfiltered
+    Full-4-Anchor variant.
+  - Adds a batching stage: raw distance readings are buffered per
+    anchor. Once a GLOBAL total of 10 successful readings (summed
+    across all anchors combined) has arrived, each anchor's buffer is
+    averaged into current_distances, a position is computed, and all
+    buffers + the counter are reset.
+
+Robustness:
+  - Tracks per-anchor online/offline status via RX_TIMEOUT messages;
+    clears that anchor's pending buffer if it drops.
+  - Prints BATCH FAILED if fewer than 3 anchors have data by the time
+    a block completes.
+
+KNOWN ISSUES:
+  1. The 10-reading block trigger counts readings GLOBALLY, not
+     per-anchor — so anchors reporting at different rates end up
+     averaged over very different sample counts within the same block
+     (e.g. one anchor smoothed over 7 samples, another over 1). This
+     makes per-block noise reduction inconsistent and anchor-dependent.
+     Fix: track reading_count per anchor and trigger only when all
+     online anchors have reached the target count.
+  2. Same zero-substitution issue as the unfiltered Full-4-Anchor
+     version: missing anchors are filled with 0.0 distance rather than
+     removed from the pairwise equation system, corrupting the
+     3-anchor fallback solve.
+"""
+import numpy as np
+import re
+import serial
+
+# --- 1. HARDWARE CONFIGURATION ---
+SERIAL_PORT = "/dev/ttyACM0"  # Verified by ls /dev/ttyACM* command on Linux or check Device Manager on Windows
+BAUD_RATE = 115200
+
+try:
+    ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=1)
+    ser.flush()
+    print(f" Connected to Serial Port: {SERIAL_PORT}")
+    print(" Listening for live UWB data stream...")
+except Exception as e:
+    print(f" ERROR: Could not open port {SERIAL_PORT}.")
+    print(f"Details: {e}")
+    exit()
+
+# Define your 4 Anchors in Centimeters i.e. place them on vertices of a square arrangement of side 200cm here. The order of anchors is important and must match the MAC address mapping below.
+anchors = np.array(
+    [
+        [0.0, 0.0],  # Anchor 0 (MAC: 0x0001) - 0
+        [200.0, 0.0],  # Anchor 1 (MAC: 0x0002) - 2
+        [0.0, 200.0],  # Anchor 2 (MAC: 0x0003) - 4
+        [200.0, 200.0],  # Anchor 3 (MAC: 0x0004) - 10
+    ]
+)
+num_anchors = len(anchors)
+
+# Dictionary that maps MAC address strings to internal indexes
+mac_to_index = {"0x0001": 0, "0x0002": 1, "0x0003": 2, "0x0004": 3}
+
+# Live health tracker (True = Online, False = Offline). It is a dictionary with mac being a dynamic view object containing all the keys in the dictionary.
+anchor_health = {mac: False for mac in mac_to_index.keys()}
+
+# Memory buffers: Holds distinct raw reading groups for block averaging
+distance_buffers = {mac: [] for mac in mac_to_index.keys()}
+current_distances = [None, None, None, None]
+
+# --- 2. OPTIMIZATION: PRE-CALCULATE STATIC PROPERTIES ---
+anchor_sq = anchors[:, 0] ** 2 + anchors[:, 1] ** 2
+
+A_list = []
+pair_indices = []
+for i in range(num_anchors):
+    for j in range(i + 1, num_anchors):
+        A_list.append(
+            [
+                2 * (anchors[i, 0] - anchors[j, 0]),
+                2 * (anchors[i, 1] - anchors[j, 1]),
+            ]
+        )
+        pair_indices.append((i, j))
+
+A = np.array(A_list)
+b = np.zeros(6)
+
+print("-" * 80)
+
+# --- 3. MAIN PARSING LOOP ---
+try:
+    reading_count = 0  # Counter to track readings within the current block
+
+    while True:
+        # Read exactly like your working debug.py script
+        raw_line = ser.readline()
+        if not raw_line:
+            continue
+
+        try:
+            line = raw_line.decode("utf-8").strip()
+            if not line:
+                continue
+
+            # --- CONDITION A: OFFLINE ALERTS (RX_TIMEOUT) ---
+            if "RX_TIMEOUT" in line:
+                mac_match = re.search(r"mac_address=(0x[0-9a-fA-F]+)", line)
+                if mac_match:
+                    mac = mac_match.group(1)
+                    if mac in mac_to_index:
+                        if anchor_health[mac] is True:
+                            print(
+                                f"OFFLINE ALERT: UWB Anchor {mac} went down! (RX_TIMEOUT)"
+                            )
+                        anchor_health[mac] = False
+                        distance_buffers[mac].clear()  # Clear pending data
+                continue
+
+            # --- CONDITION B: SUCCESSFUL READINGS ---
+            if "SUCCESS" in line and "distance[cm]=" in line:
+                mac_match = re.search(r"mac_address=(0x[0-9a-fA-F]+)", line)
+                dist_match = re.search(r"distance\[cm\]=([0-9.]+)", line)
+
+                if mac_match and dist_match:
+                    target_mac = mac_match.group(1)
+                    target_dist = float(dist_match.group(1))
+
+                    if target_mac in mac_to_index:
+                        # Store the reading to average later
+                        distance_buffers[target_mac].append(target_dist)
+                        reading_count += 1
+                        anchor_health[target_mac] = True
+
+            # --- STEP C: BLOCK COMPLETION & POSITION COMPUTATION ---
+            # Process coordinates only after accumulating exactly 10 raw data readings
+            if reading_count >= 10:
+                for mac, idx in mac_to_index.items():
+                    if len(distance_buffers[mac]) > 0:
+                        current_distances[idx] = np.mean(distance_buffers[mac])
+                    else:
+                        current_distances[idx] = None
+
+                valid_count = sum(1 for d in current_distances if d is not None)
+
+                # Compute positions if 3 or 4 anchors are operational within this batch
+                if valid_count >= 3:
+                    r_safe = [
+                        d if d is not None else 0.0 for d in current_distances
+                    ]
+                    r_sq = np.array(r_safe) ** 2
+
+                    for row_idx, (i, j) in enumerate(pair_indices):
+                        b[row_idx] = (
+                            (r_sq[j] - r_sq[i]) - anchor_sq[j] + anchor_sq[i]
+                        )
+
+                    solution, _, _, _ = np.linalg.lstsq(A, b, rcond=None)
+
+                    # Print the true scaled coordinates from averaged batch
+                    print(
+                        f"POSITION ({valid_count}/4 Anchors Active)-> X: {solution[0]:.2f} cm | Y: {solution[1]:.2f} cm\n"
+                    )
+                else:
+                    print(
+                        f"BATCH FAILED: Only {valid_count} anchors active during this block.\n"
+                    )
+
+                # --- STEP D: RESET SYSTEM FOR NEXT 10 READINGS ---
+                for mac in mac_to_index.keys():
+                    distance_buffers[mac].clear()
+                current_distances = [None, None, None, None]
+                reading_count = 0
+
+        except (ValueError, UnicodeDecodeError, IndexError):
+            continue
+
+except KeyboardInterrupt:
+    print("\n Shutting down tracker safely.")
+    ser.close()
