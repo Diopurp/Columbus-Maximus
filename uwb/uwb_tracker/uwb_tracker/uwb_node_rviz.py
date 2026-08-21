@@ -20,7 +20,8 @@ class UWBTrilaterationNode(Node):
         self.path_pub = self.create_publisher(Path, 'tag_path', 10)
 
         # --- HARDWARE CONFIGURATION ---
-        self.SERIAL_PORT = "/dev/ttyACM0"
+        self.declare_parameter('port', '/dev/ttyACM0')
+        self.SERIAL_PORT = self.get_parameter('port').value
         self.BAUD_RATE = 115200
         try:
             self.ser = serial.Serial(self.SERIAL_PORT, self.BAUD_RATE, timeout=1)
@@ -29,9 +30,26 @@ class UWBTrilaterationNode(Node):
         except Exception as e:
             self.get_logger().error(f"Could not open port {self.SERIAL_PORT}: {e}")
             raise
+        self.declare_parameter('x1', 0.0)
+        self.declare_parameter('y1', 0.0)
+        self.declare_parameter('x2', 0.0)
+        self.declare_parameter('y2', 500.0)
+        self.declare_parameter('x3', 500.0)
+        self.declare_parameter('y3', 0.0)
+        self.declare_parameter('x4', 500.0)
+        self.declare_parameter('y4', 500.0)
+
+        x1 = self.get_parameter('x1').value
+        y1 = self.get_parameter('y1').value
+        x2 = self.get_parameter('x2').value
+        y2 = self.get_parameter('y2').value
+        x3 = self.get_parameter('x3').value
+        y3 = self.get_parameter('y3').value
+        x4 = self.get_parameter('x4').value
+        y4 = self.get_parameter('y4').value
 
         self.anchors = np.array([
-            [0.0, 0.0], [200.0, 0.0], [0.0, 200.0], [200.0, 200.0],
+            [x1, y1], [x2, y2], [x3, y3], [x4, y4],
         ])
         self.num_anchors = len(self.anchors)
         self.mac_to_index = {"0x0001": 0, "0x0002": 1, "0x0003": 2, "0x0004": 3}
