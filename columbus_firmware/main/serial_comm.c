@@ -13,14 +13,18 @@
 
 #include "esp_task_wdt.h"
 
-#define UART_PORT           UART_NUM_0
-#define UART_BAUD_RATE      115200
+#define UART_PORT               UART_NUM_0
+#define UART_BAUD_RATE          115200
 
-#define UART_RX_BUFFER_SIZE 1024
-#define COMMAND_BUFFER_SIZE 64
-#define COMMAND_QUEUE_SIZE  1
+#define UART_RX_BUFFER_SIZE     1024
+#define UART_TX_BUFFER_SIZE     1024
+
+#define COMMAND_BUFFER_SIZE     64
+#define COMMAND_QUEUE_SIZE      1
+#define ODOMETRY_QUEUE_SIZE     1
 
 static QueueHandle_t command_queue = NULL;
+static QueueHandle_t odometry_queue = NULL;
 
 static bool parse_velocity_command(
     const char *message,
@@ -112,6 +116,43 @@ static void serial_receive_task(void *arg)
     }
 }
 
+static void serial_transmit_task(void *arg)
+{
+    (void)arg;
+
+    OdometryData odometry;
+    char buffer[128];
+
+    while (1)
+    {
+        if (xQueueReceive(
+                odometry_queue,
+                &odometry,
+                portMAX_DELAY) == pdTRUE)
+        {
+            int length = snprintf(
+                buffer,
+                sizeof(buffer),
+                "ODOM,%.6f,%.6f,%.6f,%.6f,%.6f\n",
+                odometry.x,
+                odometry.y,
+                odometry.yaw,
+                odometry.linear_velocity,
+                odometry.angular_velocity
+            );
+
+            if (length > 0)
+            {
+                uart_write_bytes(
+                    UART_PORT,
+                    buffer,
+                    length
+                );
+            }
+        }
+    }
+}
+
 void serial_comm_init(void)
 {
     const uart_config_t uart_config =
@@ -132,7 +173,7 @@ void serial_comm_init(void)
     uart_driver_install(
         UART_PORT,
         UART_RX_BUFFER_SIZE,
-        0,
+        UART_TX_BUFFER_SIZE,
         0,
         NULL,
         0
@@ -151,12 +192,26 @@ void serial_comm_init(void)
         sizeof(VelocityCommand)
     );
 
+    odometry_queue = xQueueCreate(
+        ODOMETRY_QUEUE_SIZE,
+        sizeof(OdometryData)
+    );
+
     xTaskCreate(
         serial_receive_task,
         "serial_receive",
         4096,
         NULL,
         10,
+        NULL
+    );
+
+    xTaskCreate(
+        serial_transmit_task,
+        "serial_transmit",
+        4096,
+        NULL,
+        9,
         NULL
     );
 }
@@ -177,5 +232,22 @@ bool serial_comm_receive_command(
             command,
             timeout
         ) == pdTRUE
+    );
+}
+
+bool serial_comm_send_odometry(
+    const OdometryData *odometry
+)
+{
+    if (odometry_queue == NULL)
+    {
+        return false;
+    }
+
+    return (
+        xQueueOverwrite(
+            odometry_queue,
+            odometry
+        ) == pdPASS
     );
 }

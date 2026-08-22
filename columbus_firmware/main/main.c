@@ -1,10 +1,14 @@
 #include "serial_comm.h"
 #include "motor_control.h"
+#include "encoder.h"
+#include "pid.h"
 
 void app_main(void)
 {
     serial_comm_init();
+    encoder_init();
     motor_control_init();
+    pid_init();
 
     VelocityCommand command;
 
@@ -14,7 +18,7 @@ void app_main(void)
                 &command,
                 portMAX_DELAY))
         {
-            motor_control_set_velocity(
+            pid_set_command_velocity(
                 command.linear,
                 command.angular
             );

@@ -3,6 +3,9 @@ idf_component_register(
         "main.c"
         "serial_comm.c"
         "motor_control.c"
+        "encoder.c"
+        "pid.c"
+
     INCLUDE_DIRS
         "."
 )

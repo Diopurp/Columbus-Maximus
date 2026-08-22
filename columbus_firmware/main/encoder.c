@@ -128,7 +128,7 @@ static void IRAM_ATTR right_encoder_isr(void *arg)
 
     portENTER_CRITICAL_ISR(&encoder_spinlock);
 
-    right_count += quad_table[index];
+    right_count -= quad_table[index];
     right_last_state = current_state;
 
     portEXIT_CRITICAL_ISR(&encoder_spinlock);
