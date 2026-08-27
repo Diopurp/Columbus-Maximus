@@ -24,7 +24,6 @@
 #include "../include/lipkg.hpp"
 #include "../include/transform.hpp"
 
-
 int main(int argc, char ** argv)
 {
   rclcpp::init(argc, argv);
@@ -53,6 +52,7 @@ int main(int argc, char ** argv)
     std::cout << n.first << "    " << n.second << std::endl;
     if (strstr(n.second.c_str(), "CP2102")) {
       port_name = n.first;
+      break;
     }
   }
 
@@ -64,7 +64,6 @@ int main(int argc, char ** argv)
           pkg->AssemblePacket();
         }
       });
-
     if (cmd_port.Open(port_name)) {
       std::cout << "LDS-02" << product << " started successfully " << std::endl;
     }
@@ -74,7 +73,6 @@ int main(int argc, char ** argv)
     // strcat(topic_name,"/LDLiDAR");
     rclcpp::QoS qos(10);
     qos.reliable();
-
     lidar_pub = node->create_publisher<sensor_msgs::msg::LaserScan>(
      "scan",
     qos

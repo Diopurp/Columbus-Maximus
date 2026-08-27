@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import math
+import time
 import serial
 
 import rclpy
@@ -22,26 +23,10 @@ class SerialBridge(Node):
         self.declare_parameter('port', '/dev/ttyUSB0')
         self.declare_parameter('baud_rate', 115200)
 
-        port = self.get_parameter('port').value
-        baud_rate = self.get_parameter('baud_rate').value
+        self.serial_port = None
+        self.last_odom_time = self.get_clock().now()
 
-        try:
-            self.serial_port = serial.Serial(
-                port,
-                baud_rate,
-                timeout=0.01
-            )
-
-            self.get_logger().info(
-                f'Serial connection opened: {port} @ {baud_rate} baud'
-            )
-
-        except serial.SerialException as e:
-            self.serial_port = None
-
-            self.get_logger().error(
-                f'Failed to open serial port {port}: {e}'
-            )
+        self.open_serial()
 
         self.subscription = self.create_subscription(
             Twist,
@@ -62,6 +47,52 @@ class SerialBridge(Node):
             0.01,
             self.read_serial
         )
+
+        # Watchdog: warns if no odom has been received in a while,
+        # separate from serial-level errors, so silent stalls (e.g.
+        # ESP32 mid-reboot) are visible in the logs.
+        self.watchdog_timer = self.create_timer(
+            1.0,
+            self.check_staleness
+        )
+
+    def open_serial(self):
+        """Open (or reopen) the serial connection to the ESP32."""
+
+        port = self.get_parameter('port').value
+        baud_rate = self.get_parameter('baud_rate').value
+
+        try:
+            # Build the Serial object WITHOUT opening it yet. Opening
+            # via serial.Serial(port, baud, ...) directly asserts
+            # pyserial's default DTR/RTS (both True) the instant the
+            # port opens - before we ever get a chance to change them.
+            # That default assertion is itself what resets/holds the
+            # ESP32, so setting DTR/RTS after opening is too late.
+            # Constructing unopened, setting the lines first, then
+            # calling open() avoids ever asserting the default state.
+            self.serial_port = serial.Serial()
+            self.serial_port.port = port
+            self.serial_port.baudrate = baud_rate
+            self.serial_port.timeout = 0.01
+            self.serial_port.dtr = False
+            self.serial_port.rts = False
+            self.serial_port.open()
+
+            # Give the ESP32 a moment to finish booting cleanly before
+            # we start expecting data from it.
+            time.sleep(0.3)
+
+            self.get_logger().info(
+                f'Serial connection opened: {port} @ {baud_rate} baud'
+            )
+
+        except serial.SerialException as e:
+            self.serial_port = None
+
+            self.get_logger().error(
+                f'Failed to open serial port {port}: {e}'
+            )
 
     def cmd_vel_callback(self, msg):
 
@@ -89,7 +120,11 @@ class SerialBridge(Node):
 
     def read_serial(self):
 
+        # If the connection isn't open (either it never opened, or a
+        # previous read/write error closed it), try to reopen it every
+        # tick instead of silently doing nothing forever.
         if self.serial_port is None:
+            self.open_serial()
             return
 
         try:
@@ -114,8 +149,15 @@ class SerialBridge(Node):
         except serial.SerialException as e:
 
             self.get_logger().error(
-                f'Failed to read serial data: {e}'
+                f'Serial read failed, will attempt to reconnect: {e}'
             )
+
+            try:
+                self.serial_port.close()
+            except serial.SerialException:
+                pass
+
+            self.serial_port = None
 
     def parse_odom(self, line):
 
@@ -168,7 +210,9 @@ class SerialBridge(Node):
             angular_velocity
         ) = data
 
-        now = self.get_clock().now().to_msg()
+        now = self.get_clock().now()
+        self.last_odom_time = now
+        now_msg = now.to_msg()
 
         half_theta = theta / 2.0
 
@@ -177,7 +221,7 @@ class SerialBridge(Node):
 
         odom = Odometry()
 
-        odom.header.stamp = now
+        odom.header.stamp = now_msg
         odom.header.frame_id = 'odom'
         odom.child_frame_id = 'base_link'
 
@@ -202,7 +246,7 @@ class SerialBridge(Node):
 
         transform = TransformStamped()
 
-        transform.header.stamp = now
+        transform.header.stamp = now_msg
         transform.header.frame_id = 'odom'
         transform.child_frame_id = 'base_link'
 
@@ -216,6 +260,24 @@ class SerialBridge(Node):
         transform.transform.rotation.w = quaternion_w
 
         self.tf_broadcaster.sendTransform(transform)
+
+    def check_staleness(self):
+        """Log a warning if no odom data has come in for a while.
+
+        This catches the case where the serial connection is still
+        technically open, but the ESP32 itself has gone quiet (e.g.
+        mid-reboot after a brownout) - something the read_serial()
+        exception handler alone can't detect.
+        """
+
+        elapsed = (
+            self.get_clock().now() - self.last_odom_time
+        ).nanoseconds / 1e9
+
+        if elapsed > 2.0:
+            self.get_logger().warn(
+                f'No odom received for {elapsed:.1f}s'
+            )
 
     def destroy_node(self):
 

@@ -1,7 +1,6 @@
 #include "pid.h"
 #include "encoder.h"
 #include "motor_control.h"
-#include "serial_comm.h"
 
 #include <math.h>
 #include <stdint.h>
@@ -214,20 +213,6 @@ static void pid_task(void *arg)
             &encoder_data
         );
 
-        /* Send the latest odometry reading back to the Pi over serial.
-         * encoder_data.theta maps to OdometryData.yaw. */
-        {
-            OdometryData odometry;
-
-            odometry.x = encoder_data.x;
-            odometry.y = encoder_data.y;
-            odometry.yaw = encoder_data.theta;
-            odometry.linear_velocity = encoder_data.linear_velocity;
-            odometry.angular_velocity = encoder_data.angular_velocity;
-
-            serial_comm_send_odometry(&odometry);
-        }
-
 
         portENTER_CRITICAL(
             &pid_spinlock
@@ -358,7 +343,7 @@ static void pid_task(void *arg)
             right_pwm
         );
 
-
+/*
         printf(
             "PID | Target L: %.3f R: %.3f | "
             "Actual L: %.3f R: %.3f | "
@@ -371,7 +356,7 @@ static void pid_task(void *arg)
             right_pwm,
             dt
         );
-
+*/
 
         vTaskDelayUntil(
             &last_wake_time,

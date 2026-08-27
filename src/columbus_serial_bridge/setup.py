@@ -25,6 +25,8 @@ setup(
     entry_points={
         'console_scripts': [
 	    'serial_bridge = columbus_serial_bridge.serial_bridge:main',
+        'hardware_interface = columbus_serial_bridge.hardware_interface_node:main',
+        'odometry_publisher = columbus_serial_bridge.odometry_node:main',
         ],
     },
 )
