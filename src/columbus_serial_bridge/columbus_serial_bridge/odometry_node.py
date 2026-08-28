@@ -13,16 +13,6 @@ from tf2_ros import TransformBroadcaster
 
 
 class OdometryPublisher(Node):
-    """
-    Turns raw "ODOM,x,y,theta,linear_vel,angular_vel" lines from the
-    hardware interface into nav_msgs/Odometry + the odom->base_link TF.
-    Mirrors the role articubot's odometry/robot_localization layer
-    plays on top of the raw hardware interface.
-
-    Subscribes:  /raw_odom_line (std_msgs/String)
-    Publishes:   /odom          (nav_msgs/Odometry)
-                 odom -> base_link transform
-    """
 
     def __init__(self):
         super().__init__('odometry_publisher')

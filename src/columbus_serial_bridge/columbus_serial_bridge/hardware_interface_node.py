@@ -10,16 +10,6 @@ from std_msgs.msg import String
 
 
 class HardwareInterface(Node):
-    """
-    Serial I/O only. Mirrors the role of articubot's diffdrive_arduino
-    hardware interface: talks to the board, does nothing else.
-
-    Subscribes:  /cmd_vel      (geometry_msgs/Twist)
-    Publishes:   /raw_odom_line (std_msgs/String) - one raw "ODOM,..."
-                 line per message, unparsed, for the odometry node to
-                 consume.
-    """
-
     def __init__(self):
         super().__init__('hardware_interface')
 
@@ -29,8 +19,6 @@ class HardwareInterface(Node):
         port = self.get_parameter('port').value
         baud_rate = self.get_parameter('baud_rate').value
 
-        # Plain open, no DTR/RTS handling - identical to the version
-        # that worked before last night's reset-pulse changes.
         self.serial_port = serial.Serial(
             port,
             baud_rate,
