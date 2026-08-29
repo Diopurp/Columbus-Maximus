@@ -1,0 +1,20 @@
+[1.164s] Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/build --no-deps symlink_data --force
+[1.434s] running develop
+[1.672s] running egg_info
+[1.672s] writing columbus_bringup.egg-info/PKG-INFO
+[1.675s] writing dependency_links to columbus_bringup.egg-info/dependency_links.txt
+[1.676s] writing entry points to columbus_bringup.egg-info/entry_points.txt
+[1.676s] writing requirements to columbus_bringup.egg-info/requires.txt
+[1.676s] writing top-level names to columbus_bringup.egg-info/top_level.txt
+[1.676s] reading manifest file 'columbus_bringup.egg-info/SOURCES.txt'
+[1.676s] writing manifest file 'columbus_bringup.egg-info/SOURCES.txt'
+[1.678s] running build_ext
+[1.678s] Creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/lib/python3.10/site-packages/columbus-bringup.egg-link (link to .)
+[1.680s] 
+[1.680s] Installed /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup
+[1.680s] running symlink_data
+[1.680s] symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/resource/columbus_bringup -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/share/ament_index/resource_index/packages
+[1.680s] symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/package.xml -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/share/columbus_bringup
+[1.680s] symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/launch/columbus_bringup_uwb_teleop.launch.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/share/columbus_bringup/launch
+[1.681s] symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/config/ekf.yaml -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/share/columbus_bringup/config
+[1.734s] Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup' returned '0': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/build --no-deps symlink_data --force

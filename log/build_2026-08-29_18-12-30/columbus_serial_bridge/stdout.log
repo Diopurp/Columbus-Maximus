@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing columbus_serial_bridge.egg-info/PKG-INFO
+writing dependency_links to columbus_serial_bridge.egg-info/dependency_links.txt
+writing entry points to columbus_serial_bridge.egg-info/entry_points.txt
+writing requirements to columbus_serial_bridge.egg-info/requires.txt
+writing top-level names to columbus_serial_bridge.egg-info/top_level.txt
+reading manifest file 'columbus_serial_bridge.egg-info/SOURCES.txt'
+writing manifest file 'columbus_serial_bridge.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages/columbus-serial-bridge.egg-link (link to .)
+Installing hardware_interface_node script to /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/columbus_serial_bridge
+Installing odometry_node script to /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/columbus_serial_bridge
+
+Installed /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge
+running symlink_data
+symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/resource/columbus_serial_bridge -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/ament_index/resource_index/packages
+symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/package.xml -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/columbus_serial_bridge

@@ -1,0 +1,19 @@
+running develop
+running egg_info
+writing uwb_tracker.egg-info/PKG-INFO
+writing dependency_links to uwb_tracker.egg-info/dependency_links.txt
+writing entry points to uwb_tracker.egg-info/entry_points.txt
+writing requirements to uwb_tracker.egg-info/requires.txt
+writing top-level names to uwb_tracker.egg-info/top_level.txt
+reading manifest file 'uwb_tracker.egg-info/SOURCES.txt'
+writing manifest file 'uwb_tracker.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/python3.10/site-packages/uwb-tracker.egg-link (link to .)
+Installing uwb_node script to /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/uwb_tracker
+Installing uwb_node_rviz script to /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/uwb_tracker
+
+Installed /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker
+running symlink_data
+symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/resource/uwb_tracker -> /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/ament_index/resource_index/packages
+symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/package.xml -> /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/uwb_tracker
+symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/config/uwb_params.yaml -> /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/uwb_tracker/config

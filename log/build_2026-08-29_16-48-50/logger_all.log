@@ -1,0 +1,342 @@
+[0.065s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.065s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7dfcc0037820>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7dfcc0036770>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7dfcc0036770>>)
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.158s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/durva/ros2_ws/src/Columbus-Maximus'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_firmware) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_firmware) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_firmware) ignored
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extensions ['ignore', 'ignore_ament_install']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'ignore'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'ignore_ament_install'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extensions ['colcon_pkg']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'colcon_pkg'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extensions ['colcon_meta']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'colcon_meta'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extensions ['ros']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'ros'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extensions ['cmake', 'python']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'cmake'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'python'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extensions ['python_setup_py']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(maps) by extension 'python_setup_py'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbus_serial_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbus_serial_bridge) by extension 'ignore'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbus_serial_bridge) by extension 'ignore_ament_install'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbus_serial_bridge) by extensions ['colcon_pkg']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbus_serial_bridge) by extension 'colcon_pkg'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbus_serial_bridge) by extensions ['colcon_meta']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbus_serial_bridge) by extension 'colcon_meta'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbus_serial_bridge) by extensions ['ros']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbus_serial_bridge) by extension 'ros'
+[0.170s] DEBUG:colcon.colcon_core.package_identification:Package 'src/columbus_serial_bridge' with type 'ros.ament_python' and name 'columbus_serial_bridge'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbus_teleop) by extensions ['ignore', 'ignore_ament_install']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbus_teleop) by extension 'ignore'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbus_teleop) by extension 'ignore_ament_install'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbus_teleop) by extensions ['colcon_pkg']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbus_teleop) by extension 'colcon_pkg'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbus_teleop) by extensions ['colcon_meta']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbus_teleop) by extension 'colcon_meta'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbus_teleop) by extensions ['ros']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbus_teleop) by extension 'ros'
+[0.171s] DEBUG:colcon.colcon_core.package_identification:Package 'src/columbus_teleop' with type 'ros.ament_python' and name 'columbus_teleop'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extensions ['ignore', 'ignore_ament_install']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extension 'ignore'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extension 'ignore_ament_install'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extensions ['colcon_pkg']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extension 'colcon_pkg'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extensions ['colcon_meta']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extension 'colcon_meta'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extensions ['ros']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extension 'ros'
+[0.171s] DEBUG:colcon.colcon_core.package_identification:Package 'src/columbusmaximus' with type 'ros.ament_python' and name 'columbusmaximus'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver) by extension 'ignore'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver) by extension 'ignore_ament_install'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver) by extensions ['colcon_pkg']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver) by extension 'colcon_pkg'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver) by extensions ['colcon_meta']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver) by extension 'colcon_meta'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver) by extensions ['ros']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver) by extension 'ros'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver) by extensions ['cmake', 'python']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver) by extension 'cmake'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver) by extension 'python'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver) by extensions ['python_setup_py']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver) by extension 'python_setup_py'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver/ld08_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver/ld08_driver) by extension 'ignore'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver/ld08_driver) by extension 'ignore_ament_install'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver/ld08_driver) by extensions ['colcon_pkg']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver/ld08_driver) by extension 'colcon_pkg'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver/ld08_driver) by extensions ['colcon_meta']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver/ld08_driver) by extension 'colcon_meta'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver/ld08_driver) by extensions ['ros']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_driver/ld08_driver) by extension 'ros'
+[0.173s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lidar_driver/ld08_driver' with type 'ros.ament_cmake' and name 'ld08_driver'
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.186s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.187s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.187s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/durva/ros2_ws/src/Columbus-Maximus/install
+[0.188s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 319 installed packages in /opt/ros/humble
+[0.197s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.222s] Level 5:colcon.colcon_core.verb:set package 'columbus_serial_bridge' build argument 'cmake_args' from command line to 'None'
+[0.222s] Level 5:colcon.colcon_core.verb:set package 'columbus_serial_bridge' build argument 'cmake_target' from command line to 'None'
+[0.222s] Level 5:colcon.colcon_core.verb:set package 'columbus_serial_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.222s] Level 5:colcon.colcon_core.verb:set package 'columbus_serial_bridge' build argument 'cmake_clean_cache' from command line to 'False'
+[0.222s] Level 5:colcon.colcon_core.verb:set package 'columbus_serial_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[0.222s] Level 5:colcon.colcon_core.verb:set package 'columbus_serial_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[0.222s] Level 5:colcon.colcon_core.verb:set package 'columbus_serial_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[0.222s] Level 5:colcon.colcon_core.verb:set package 'columbus_serial_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[0.222s] Level 5:colcon.colcon_core.verb:set package 'columbus_serial_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.222s] DEBUG:colcon.colcon_core.verb:Building package 'columbus_serial_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge', 'merge_install': False, 'path': '/home/durva/ros2_ws/src/Columbus-Maximus/src/columbus_serial_bridge', 'symlink_install': True, 'test_result_base': None}
+[0.222s] Level 5:colcon.colcon_core.verb:set package 'columbus_teleop' build argument 'cmake_args' from command line to 'None'
+[0.222s] Level 5:colcon.colcon_core.verb:set package 'columbus_teleop' build argument 'cmake_target' from command line to 'None'
+[0.222s] Level 5:colcon.colcon_core.verb:set package 'columbus_teleop' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.222s] Level 5:colcon.colcon_core.verb:set package 'columbus_teleop' build argument 'cmake_clean_cache' from command line to 'False'
+[0.222s] Level 5:colcon.colcon_core.verb:set package 'columbus_teleop' build argument 'cmake_clean_first' from command line to 'False'
+[0.222s] Level 5:colcon.colcon_core.verb:set package 'columbus_teleop' build argument 'cmake_force_configure' from command line to 'False'
+[0.222s] Level 5:colcon.colcon_core.verb:set package 'columbus_teleop' build argument 'ament_cmake_args' from command line to 'None'
+[0.222s] Level 5:colcon.colcon_core.verb:set package 'columbus_teleop' build argument 'catkin_cmake_args' from command line to 'None'
+[0.222s] Level 5:colcon.colcon_core.verb:set package 'columbus_teleop' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.222s] DEBUG:colcon.colcon_core.verb:Building package 'columbus_teleop' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop', 'merge_install': False, 'path': '/home/durva/ros2_ws/src/Columbus-Maximus/src/columbus_teleop', 'symlink_install': True, 'test_result_base': None}
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'columbusmaximus' build argument 'cmake_args' from command line to 'None'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'columbusmaximus' build argument 'cmake_target' from command line to 'None'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'columbusmaximus' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'columbusmaximus' build argument 'cmake_clean_cache' from command line to 'False'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'columbusmaximus' build argument 'cmake_clean_first' from command line to 'False'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'columbusmaximus' build argument 'cmake_force_configure' from command line to 'False'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'columbusmaximus' build argument 'ament_cmake_args' from command line to 'None'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'columbusmaximus' build argument 'catkin_cmake_args' from command line to 'None'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'columbusmaximus' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.223s] DEBUG:colcon.colcon_core.verb:Building package 'columbusmaximus' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus', 'merge_install': False, 'path': '/home/durva/ros2_ws/src/Columbus-Maximus/src/columbusmaximus', 'symlink_install': True, 'test_result_base': None}
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'ld08_driver' build argument 'cmake_args' from command line to 'None'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'ld08_driver' build argument 'cmake_target' from command line to 'None'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'ld08_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'ld08_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'ld08_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'ld08_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'ld08_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'ld08_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'ld08_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.223s] DEBUG:colcon.colcon_core.verb:Building package 'ld08_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver', 'merge_install': False, 'path': '/home/durva/ros2_ws/src/Columbus-Maximus/src/lidar_driver/ld08_driver', 'symlink_install': True, 'test_result_base': None}
+[0.223s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.224s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.224s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/durva/ros2_ws/src/Columbus-Maximus/src/columbus_serial_bridge' with build type 'ament_python'
+[0.224s] Level 1:colcon.colcon_core.shell:create_environment_hook('columbus_serial_bridge', 'ament_prefix_path')
+[0.225s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.225s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/columbus_serial_bridge/hook/ament_prefix_path.ps1'
+[0.226s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/columbus_serial_bridge/hook/ament_prefix_path.dsv'
+[0.226s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/columbus_serial_bridge/hook/ament_prefix_path.sh'
+[0.227s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.227s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.229s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/durva/ros2_ws/src/Columbus-Maximus/src/columbus_teleop' with build type 'ament_python'
+[0.229s] Level 1:colcon.colcon_core.shell:create_environment_hook('columbus_teleop', 'ament_prefix_path')
+[0.229s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/columbus_teleop/hook/ament_prefix_path.ps1'
+[0.229s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/columbus_teleop/hook/ament_prefix_path.dsv'
+[0.229s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/columbus_teleop/hook/ament_prefix_path.sh'
+[0.230s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.230s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.231s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/durva/ros2_ws/src/Columbus-Maximus/src/columbusmaximus' with build type 'ament_python'
+[0.231s] Level 1:colcon.colcon_core.shell:create_environment_hook('columbusmaximus', 'ament_prefix_path')
+[0.232s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/hook/ament_prefix_path.ps1'
+[0.232s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/hook/ament_prefix_path.dsv'
+[0.232s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/hook/ament_prefix_path.sh'
+[0.232s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.232s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.234s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/durva/ros2_ws/src/Columbus-Maximus/src/lidar_driver/ld08_driver' with build type 'ament_cmake'
+[0.234s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/durva/ros2_ws/src/Columbus-Maximus/src/lidar_driver/ld08_driver'
+[0.234s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.234s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.386s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/durva/ros2_ws/src/Columbus-Maximus/src/columbus_serial_bridge'
+[0.386s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.386s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.535s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/durva/ros2_ws/src/Columbus-Maximus/src/columbus_teleop'
+[0.535s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.535s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.684s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/durva/ros2_ws/src/Columbus-Maximus/src/columbusmaximus'
+[0.685s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.685s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.690s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/durva/ros2_ws/src/Columbus-Maximus/src/lidar_driver/ld08_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver
+[0.918s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: clean, build, setopt, build_ext, check, install, sdist, bdist, install_egg_info, symlink_data, upload, dist_info, saveopts, test, bdist_wheel, build_scripts, install_headers, bdist_dumb, rotate, egg_info, install_data, develop, register, build_py, easy_install, upload_docs, install_lib, alias, bdist_rpm, bdist_egg, build_clib, install_scripts
+[0.933s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: clean, build, setopt, build_ext, check, install, sdist, bdist, install_egg_info, symlink_data, upload, dist_info, saveopts, test, bdist_wheel, build_scripts, install_headers, bdist_dumb, rotate, egg_info, install_data, develop, register, build_py, easy_install, upload_docs, install_lib, alias, bdist_rpm, bdist_egg, build_clib, install_scripts
+[0.943s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: clean, build, setopt, build_ext, check, install, sdist, bdist, install_egg_info, symlink_data, upload, dist_info, saveopts, test, bdist_wheel, build_scripts, install_headers, bdist_dumb, rotate, egg_info, install_data, develop, register, build_py, easy_install, upload_docs, install_lib, alias, bdist_rpm, bdist_egg, build_clib, install_scripts
+[1.107s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --always-copy, --install-dir, --find-links, --build-directory, --prefix, --record, --user, --local-snapshots-ok, --multi-version, --optimize, --exclude-scripts, --quiet, --editable, --script-dir, --no-user-cfg, --always-unzip, --upgrade, --zip-ok, --uninstall, --help, --dry-run, --no-deps, --egg-path, --version, --allow-hosts, --index-url, --site-dirs, --install-layout, --no-find-links, --force-installation-into-system-dir, --verbose
+[1.109s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/build --no-deps symlink_data
+[1.123s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --always-copy, --install-dir, --find-links, --build-directory, --prefix, --record, --user, --local-snapshots-ok, --multi-version, --optimize, --exclude-scripts, --quiet, --editable, --script-dir, --no-user-cfg, --always-unzip, --upgrade, --zip-ok, --uninstall, --help, --dry-run, --no-deps, --egg-path, --version, --allow-hosts, --index-url, --site-dirs, --install-layout, --no-find-links, --force-installation-into-system-dir, --verbose
+[1.126s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/build --no-deps symlink_data
+[1.145s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --always-copy, --install-dir, --find-links, --build-directory, --prefix, --record, --user, --local-snapshots-ok, --multi-version, --optimize, --exclude-scripts, --quiet, --editable, --script-dir, --no-user-cfg, --always-unzip, --upgrade, --zip-ok, --uninstall, --help, --dry-run, --no-deps, --egg-path, --version, --allow-hosts, --index-url, --site-dirs, --install-layout, --no-find-links, --force-installation-into-system-dir, --verbose
+[1.147s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop/build --no-deps symlink_data
+[1.395s] Level 1:colcon.colcon_core.shell:create_environment_hook('columbus_serial_bridge', 'pythonpath_develop')
+[1.396s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/share/columbus_serial_bridge/hook/pythonpath_develop.ps1'
+[1.396s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge' returned '0': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/build --no-deps symlink_data
+[1.396s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/share/columbus_serial_bridge/hook/pythonpath_develop.dsv'
+[1.397s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/share/columbus_serial_bridge/hook/pythonpath_develop.sh'
+[1.398s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge' for CMake module files
+[1.398s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge' for CMake config files
+[1.399s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib'
+[1.399s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/bin'
+[1.399s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/pkgconfig/columbus_serial_bridge.pc'
+[1.399s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages'
+[1.399s] Level 1:colcon.colcon_core.shell:create_environment_hook('columbus_serial_bridge', 'pythonpath')
+[1.399s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/columbus_serial_bridge/hook/pythonpath.ps1'
+[1.399s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/columbus_serial_bridge/hook/pythonpath.dsv'
+[1.400s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/columbus_serial_bridge/hook/pythonpath.sh'
+[1.400s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/bin'
+[1.400s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(columbus_serial_bridge)
+[1.400s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/columbus_serial_bridge/package.ps1'
+[1.401s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/columbus_serial_bridge/package.dsv'
+[1.401s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/columbus_serial_bridge/package.sh'
+[1.402s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/columbus_serial_bridge/package.bash'
+[1.402s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/columbus_serial_bridge/package.zsh'
+[1.403s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/colcon-core/packages/columbus_serial_bridge)
+[1.446s] Level 1:colcon.colcon_core.shell:create_environment_hook('columbusmaximus', 'pythonpath_develop')
+[1.447s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/share/columbusmaximus/hook/pythonpath_develop.ps1'
+[1.447s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus' returned '0': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/build --no-deps symlink_data
+[1.448s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/share/columbusmaximus/hook/pythonpath_develop.dsv'
+[1.448s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/share/columbusmaximus/hook/pythonpath_develop.sh'
+[1.449s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus' for CMake module files
+[1.449s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus' for CMake config files
+[1.450s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib'
+[1.450s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/bin'
+[1.450s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/pkgconfig/columbusmaximus.pc'
+[1.450s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages'
+[1.450s] Level 1:colcon.colcon_core.shell:create_environment_hook('columbusmaximus', 'pythonpath')
+[1.450s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/hook/pythonpath.ps1'
+[1.451s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/hook/pythonpath.dsv'
+[1.451s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/hook/pythonpath.sh'
+[1.452s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/bin'
+[1.452s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(columbusmaximus)
+[1.452s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/package.ps1'
+[1.453s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/package.dsv'
+[1.453s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/package.sh'
+[1.454s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/package.bash'
+[1.454s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/package.zsh'
+[1.454s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/colcon-core/packages/columbusmaximus)
+[1.455s] Level 1:colcon.colcon_core.shell:create_environment_hook('columbus_teleop', 'pythonpath_develop')
+[1.455s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop/share/columbus_teleop/hook/pythonpath_develop.ps1'
+[1.456s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop' returned '0': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop/build --no-deps symlink_data
+[1.456s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop/share/columbus_teleop/hook/pythonpath_develop.dsv'
+[1.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop/share/columbus_teleop/hook/pythonpath_develop.sh'
+[1.457s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop' for CMake module files
+[1.457s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop' for CMake config files
+[1.458s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/lib'
+[1.458s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/bin'
+[1.458s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/lib/pkgconfig/columbus_teleop.pc'
+[1.458s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/lib/python3.10/site-packages'
+[1.458s] Level 1:colcon.colcon_core.shell:create_environment_hook('columbus_teleop', 'pythonpath')
+[1.458s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/columbus_teleop/hook/pythonpath.ps1'
+[1.459s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/columbus_teleop/hook/pythonpath.dsv'
+[1.459s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/columbus_teleop/hook/pythonpath.sh'
+[1.460s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/bin'
+[1.460s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(columbus_teleop)
+[1.460s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/columbus_teleop/package.ps1'
+[1.461s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/columbus_teleop/package.dsv'
+[1.461s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/columbus_teleop/package.sh'
+[1.462s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/columbus_teleop/package.bash'
+[1.462s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/columbus_teleop/package.zsh'
+[1.462s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/colcon-core/packages/columbus_teleop)
+[1.504s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/durva/ros2_ws/src/Columbus-Maximus/src/lidar_driver/ld08_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver
+[1.506s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver -- -j8 -l8
+[4.919s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver -- -j8 -l8
+[4.925s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver
+[5.037s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ld08_driver)
+[5.037s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver' for CMake module files
+[5.038s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver
+[5.038s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver' for CMake config files
+[5.038s] Level 1:colcon.colcon_core.shell:create_environment_hook('ld08_driver', 'cmake_prefix_path')
+[5.038s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/hook/cmake_prefix_path.ps1'
+[5.039s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/hook/cmake_prefix_path.dsv'
+[5.039s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/hook/cmake_prefix_path.sh'
+[5.040s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/lib'
+[5.040s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/bin'
+[5.040s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/lib/pkgconfig/ld08_driver.pc'
+[5.040s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/lib/python3.10/site-packages'
+[5.040s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/bin'
+[5.040s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/package.ps1'
+[5.041s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/package.dsv'
+[5.041s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/package.sh'
+[5.041s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/package.bash'
+[5.042s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/package.zsh'
+[5.042s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/colcon-core/packages/ld08_driver)
+[5.043s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ld08_driver)
+[5.043s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver' for CMake module files
+[5.043s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver' for CMake config files
+[5.043s] Level 1:colcon.colcon_core.shell:create_environment_hook('ld08_driver', 'cmake_prefix_path')
+[5.043s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/hook/cmake_prefix_path.ps1'
+[5.043s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/hook/cmake_prefix_path.dsv'
+[5.044s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/hook/cmake_prefix_path.sh'
+[5.044s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/lib'
+[5.044s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/bin'
+[5.044s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/lib/pkgconfig/ld08_driver.pc'
+[5.044s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/lib/python3.10/site-packages'
+[5.044s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/bin'
+[5.044s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/package.ps1'
+[5.045s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/package.dsv'
+[5.045s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/package.sh'
+[5.045s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/package.bash'
+[5.046s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/package.zsh'
+[5.046s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/colcon-core/packages/ld08_driver)
+[5.046s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.046s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.046s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.046s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.051s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.051s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.051s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.058s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.059s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/durva/ros2_ws/src/Columbus-Maximus/install/local_setup.ps1'
+[5.060s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/durva/ros2_ws/src/Columbus-Maximus/install/_local_setup_util_ps1.py'
+[5.062s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/durva/ros2_ws/src/Columbus-Maximus/install/setup.ps1'
+[5.063s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/durva/ros2_ws/src/Columbus-Maximus/install/local_setup.sh'
+[5.064s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/durva/ros2_ws/src/Columbus-Maximus/install/_local_setup_util_sh.py'
+[5.064s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/durva/ros2_ws/src/Columbus-Maximus/install/setup.sh'
+[5.065s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/durva/ros2_ws/src/Columbus-Maximus/install/local_setup.bash'
+[5.065s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/durva/ros2_ws/src/Columbus-Maximus/install/setup.bash'
+[5.066s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/durva/ros2_ws/src/Columbus-Maximus/install/local_setup.zsh'
+[5.066s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/durva/ros2_ws/src/Columbus-Maximus/install/setup.zsh'

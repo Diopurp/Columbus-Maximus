@@ -4,3 +4,6 @@ source;share/columbus_serial_bridge/hook/pythonpath.sh
 source;share/columbus_serial_bridge/hook/ament_prefix_path.ps1
 source;share/columbus_serial_bridge/hook/ament_prefix_path.dsv
 source;share/columbus_serial_bridge/hook/ament_prefix_path.sh
+source;../../build/columbus_serial_bridge/share/columbus_serial_bridge/hook/pythonpath_develop.ps1
+source;../../build/columbus_serial_bridge/share/columbus_serial_bridge/hook/pythonpath_develop.dsv
+source;../../build/columbus_serial_bridge/share/columbus_serial_bridge/hook/pythonpath_develop.sh

@@ -4,3 +4,6 @@ source;share/columbus_bringup/hook/pythonpath.sh
 source;share/columbus_bringup/hook/ament_prefix_path.ps1
 source;share/columbus_bringup/hook/ament_prefix_path.dsv
 source;share/columbus_bringup/hook/ament_prefix_path.sh
+source;../../build/columbus_bringup/share/columbus_bringup/hook/pythonpath_develop.ps1
+source;../../build/columbus_bringup/share/columbus_bringup/hook/pythonpath_develop.dsv
+source;../../build/columbus_bringup/share/columbus_bringup/hook/pythonpath_develop.sh

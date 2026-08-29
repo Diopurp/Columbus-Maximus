@@ -1,0 +1,21 @@
+[1.114s] Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/build --no-deps symlink_data --force
+[1.400s] running develop
+[1.568s] running egg_info
+[1.568s] writing uwb_tracker.egg-info/PKG-INFO
+[1.568s] writing dependency_links to uwb_tracker.egg-info/dependency_links.txt
+[1.568s] writing entry points to uwb_tracker.egg-info/entry_points.txt
+[1.568s] writing requirements to uwb_tracker.egg-info/requires.txt
+[1.568s] writing top-level names to uwb_tracker.egg-info/top_level.txt
+[1.571s] reading manifest file 'uwb_tracker.egg-info/SOURCES.txt'
+[1.572s] writing manifest file 'uwb_tracker.egg-info/SOURCES.txt'
+[1.574s] running build_ext
+[1.574s] Creating /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/python3.10/site-packages/uwb-tracker.egg-link (link to .)
+[1.575s] Installing uwb_node script to /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/uwb_tracker
+[1.575s] Installing uwb_node_rviz script to /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/uwb_tracker
+[1.575s] 
+[1.575s] Installed /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker
+[1.575s] running symlink_data
+[1.576s] symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/resource/uwb_tracker -> /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/ament_index/resource_index/packages
+[1.576s] symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/package.xml -> /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/uwb_tracker
+[1.576s] symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/config/uwb_params.yaml -> /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/uwb_tracker/config
+[1.625s] Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker' returned '0': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/build --no-deps symlink_data --force

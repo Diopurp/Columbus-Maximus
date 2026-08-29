@@ -1,0 +1,70 @@
+[0.455s] Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/durva/ros2_ws/src/Columbus-Maximus/src/lidar_driver/ld08_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver
+[0.493s] -- The C compiler identification is GNU 11.4.0
+[0.531s] -- The CXX compiler identification is GNU 11.4.0
+[0.535s] -- Detecting C compiler ABI info
+[0.579s] -- Detecting C compiler ABI info - done
+[0.587s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.588s] -- Detecting C compile features
+[0.588s] -- Detecting C compile features - done
+[0.591s] -- Detecting CXX compiler ABI info
+[0.648s] -- Detecting CXX compiler ABI info - done
+[0.652s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.653s] -- Detecting CXX compile features
+[0.653s] -- Detecting CXX compile features - done
+[0.654s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.762s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.804s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.819s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[0.853s] -- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.856s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.861s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.869s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.881s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.911s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.913s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.967s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.985s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.011s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.016s] -- Looking for pthread.h
+[1.063s] -- Looking for pthread.h - found
+[1.064s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.112s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.113s] -- Found Threads: TRUE  
+[1.171s] -- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.198s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system 
+[1.251s] -- Configuring done
+[1.257s] -- Generating done
+[1.260s] -- Build files have been written to: /home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver
+[1.269s] Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/durva/ros2_ws/src/Columbus-Maximus/src/lidar_driver/ld08_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver
+[1.271s] Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver -- -j8 -l8
+[1.307s] [ 33%] [32mBuilding CXX object CMakeFiles/ld08_driver.dir/src/lipkg.cpp.o[0m
+[1.307s] [ 33%] [32mBuilding CXX object CMakeFiles/ld08_driver.dir/src/transform.cpp.o[0m
+[1.307s] [ 50%] [32mBuilding CXX object CMakeFiles/ld08_driver.dir/src/slbf.cpp.o[0m
+[1.308s] [ 66%] [32mBuilding CXX object CMakeFiles/ld08_driver.dir/src/cmd_interface_linux.cpp.o[0m
+[1.308s] [ 83%] [32mBuilding CXX object CMakeFiles/ld08_driver.dir/src/main.cpp.o[0m
+[4.502s] [100%] [32m[1mLinking CXX executable ld08_driver[0m
+[4.677s] [100%] Built target ld08_driver
+[4.684s] Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver -- -j8 -l8
+[4.691s] Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver
+[4.696s] -- Install configuration: ""
+[4.697s] -- Execute custom install script
+[4.697s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/launch/ld08.launch.py
+[4.703s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/lib/ld08_driver/ld08_driver
+[4.709s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ament_index/resource_index/package_run_dependencies/ld08_driver
+[4.715s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ament_index/resource_index/parent_prefix_path/ld08_driver
+[4.722s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/environment/ament_prefix_path.sh
+[4.728s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/environment/ament_prefix_path.dsv
+[4.733s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/environment/path.sh
+[4.738s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/environment/path.dsv
+[4.744s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/local_setup.bash
+[4.749s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/local_setup.sh
+[4.754s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/local_setup.zsh
+[4.759s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/local_setup.dsv
+[4.765s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/package.dsv
+[4.770s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ament_index/resource_index/packages/ld08_driver
+[4.775s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.780s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.786s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/cmake/ld08_driverConfig.cmake
+[4.791s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/cmake/ld08_driverConfig-version.cmake
+[4.797s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/package.xml
+[4.803s] Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver

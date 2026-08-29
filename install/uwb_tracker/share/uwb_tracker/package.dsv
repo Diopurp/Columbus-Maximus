@@ -4,3 +4,6 @@ source;share/uwb_tracker/hook/pythonpath.sh
 source;share/uwb_tracker/hook/ament_prefix_path.ps1
 source;share/uwb_tracker/hook/ament_prefix_path.dsv
 source;share/uwb_tracker/hook/ament_prefix_path.sh
+source;../../build/uwb_tracker/share/uwb_tracker/hook/pythonpath_develop.ps1
+source;../../build/uwb_tracker/share/uwb_tracker/hook/pythonpath_develop.dsv
+source;../../build/uwb_tracker/share/uwb_tracker/hook/pythonpath_develop.sh

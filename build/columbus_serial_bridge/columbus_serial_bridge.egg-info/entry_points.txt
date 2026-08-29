@@ -1,5 +1,4 @@
 [console_scripts]
-hardware_interface = columbus_serial_bridge.hardware_interface_node:main
-odometry_publisher = columbus_serial_bridge.odometry_node:main
-serial_bridge = columbus_serial_bridge.serial_bridge:main
+hardware_interface_node = columbus_serial_bridge.hardware_interface_node:main
+odometry_node = columbus_serial_bridge.odometry_node:main
 

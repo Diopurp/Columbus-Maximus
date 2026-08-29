@@ -1,0 +1,26 @@
+[0.885s] Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/build --no-deps symlink_data
+[1.051s] running develop
+[1.145s] running egg_info
+[1.145s] creating columbus_serial_bridge.egg-info
+[1.145s] writing columbus_serial_bridge.egg-info/PKG-INFO
+[1.145s] writing dependency_links to columbus_serial_bridge.egg-info/dependency_links.txt
+[1.145s] writing entry points to columbus_serial_bridge.egg-info/entry_points.txt
+[1.145s] writing requirements to columbus_serial_bridge.egg-info/requires.txt
+[1.145s] writing top-level names to columbus_serial_bridge.egg-info/top_level.txt
+[1.145s] writing manifest file 'columbus_serial_bridge.egg-info/SOURCES.txt'
+[1.146s] reading manifest file 'columbus_serial_bridge.egg-info/SOURCES.txt'
+[1.147s] writing manifest file 'columbus_serial_bridge.egg-info/SOURCES.txt'
+[1.148s] running build_ext
+[1.148s] Creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages/columbus-serial-bridge.egg-link (link to .)
+[1.148s] Installing hardware_interface script to /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/columbus_serial_bridge
+[1.148s] Installing odometry_publisher script to /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/columbus_serial_bridge
+[1.148s] Installing serial_bridge script to /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/columbus_serial_bridge
+[1.149s] 
+[1.149s] Installed /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge
+[1.149s] running symlink_data
+[1.149s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/ament_index
+[1.149s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/ament_index/resource_index
+[1.149s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/ament_index/resource_index/packages
+[1.149s] symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/resource/columbus_serial_bridge -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/ament_index/resource_index/packages
+[1.149s] symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/package.xml -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/share/columbus_serial_bridge
+[1.172s] Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge' returned '0': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/build --no-deps symlink_data
