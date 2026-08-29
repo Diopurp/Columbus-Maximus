@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://download.ros.org/schema/package_format3.xsd"?>
+<package format="3">
+  <name>columbus_teleop</name>
+  <version>1.0.0</version>
+  <description>
+    Custom keyboard teleoperation node for the Columbus Maximus
+    differential drive robot. Publishes geometry_msgs/msg/Twist messages
+    on /cmd_vel at a fixed rate, with adjustable linear and angular speeds
+    and pre-programmed motion routines.
+  </description>
+  <maintainer email="manashanwat@gmail.com">Manas Hanwat</maintainer>
+  <license>Apache-2.0</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
