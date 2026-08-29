@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from geometry_msgs.msg import Point, PoseStamped
+from geometry_msgs.msg import Point, PoseStamped, PoseWithCovarianceStamped
 from visualization_msgs.msg import Marker, MarkerArray
 from nav_msgs.msg import Path
 import numpy as np
@@ -13,7 +13,7 @@ class UWBTrilaterationNode(Node):
         super().__init__('uwb_trilateration_node')
 
         # --- publishers ---
-        self.publisher_ = self.create_publisher(Point, 'uwb_pose', 10)
+        self.publisher_ = self.create_publisher(PoseWithCovarianceStamped, 'uwb_pose', 10)
         self.anchor_marker_pub = self.create_publisher(MarkerArray, 'anchor_markers', 10)
         self.tag_marker_pub = self.create_publisher(Marker, 'tag_marker', 10)
         # self.lines_pub = self.create_publisher(Marker, 'tag_to_anchor_lines', 10)
@@ -223,8 +223,19 @@ class UWBTrilaterationNode(Node):
                     tag_x = float(solution[0]) / 100.0
                     tag_y = float(solution[1]) / 100.0
 
-                    msg = Point()
-                    msg.x, msg.y, msg.z = tag_x, tag_y, 0.0
+                    msg = PoseWithCovarianceStamped()
+                    msg.header.stamp = self.get_clock().now().to_msg()
+                    msg.header.frame_id = 'world'  # matches anchor/tag marker frame
+                    msg.pose.pose.position.x = tag_x
+                    msg.pose.pose.position.y = tag_y
+                    msg.pose.pose.position.z = 0.0
+                    msg.pose.pose.orientation.w = 1.0  # no heading info from UWB
+
+                    cov = [0.0] * 36
+                    cov[0] = 0.04   # x variance - from measured ~20cm jitter during calibration
+                    cov[7] = 0.04   # y variance
+                    msg.pose.covariance = cov
+
                     self.publisher_.publish(msg)
                     self.get_logger().info(
                         f"POSITION ({valid_count}/4) -> X: {solution[0]:.2f}cm Y: {solution[1]:.2f}cm"
