@@ -1,0 +1,48 @@
+[0.465s] Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/build
+[0.646s] running develop
+[0.743s] Removing /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages/columbusmaximus.egg-link (link to .)
+[0.764s] Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus' returned '0': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/build
+[0.773s] Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/src/columbusmaximus': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/columbusmaximus build --build-base /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/build install --record /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/install.log --install-scripts $base/lib/columbusmaximus --single-version-externally-managed install_data --force
+[0.936s] running egg_info
+[0.937s] writing ../../build/columbusmaximus/columbusmaximus.egg-info/PKG-INFO
+[0.937s] writing dependency_links to ../../build/columbusmaximus/columbusmaximus.egg-info/dependency_links.txt
+[0.937s] writing entry points to ../../build/columbusmaximus/columbusmaximus.egg-info/entry_points.txt
+[0.937s] writing requirements to ../../build/columbusmaximus/columbusmaximus.egg-info/requires.txt
+[0.937s] writing top-level names to ../../build/columbusmaximus/columbusmaximus.egg-info/top_level.txt
+[0.938s] reading manifest file '../../build/columbusmaximus/columbusmaximus.egg-info/SOURCES.txt'
+[0.945s] writing manifest file '../../build/columbusmaximus/columbusmaximus.egg-info/SOURCES.txt'
+[0.945s] running build
+[0.946s] running build_py
+[0.946s] creating /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/build
+[0.946s] creating /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/build/lib
+[0.946s] creating /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/build/lib/columbusmaximus
+[0.946s] copying columbusmaximus/__init__.py -> /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/build/lib/columbusmaximus
+[0.946s] running install
+[0.946s] running install_lib
+[0.947s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages/columbusmaximus
+[0.947s] copying /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/build/lib/columbusmaximus/__init__.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages/columbusmaximus
+[0.947s] byte-compiling /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages/columbusmaximus/__init__.py to __init__.cpython-310.pyc
+[0.947s] running install_data
+[0.947s] copying resource/columbusmaximus -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/ament_index/resource_index/packages
+[0.948s] copying package.xml -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus
+[0.948s] copying model.config -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus
+[0.948s] copying model.sdf -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus
+[0.948s] copying description/robot.urdf.xacro -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/description
+[0.948s] copying description/lidar.xacro -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/description
+[0.948s] copying description/robot_core.xacro -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/description
+[0.948s] copying description/gazebo_control.xacro -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/description
+[0.949s] copying meshes/Assembly_1.stl -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/meshes
+[0.950s] copying launch/slam.launch.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/launch
+[0.950s] copying launch/rsp.launch.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/launch
+[0.950s] copying launch/launch_sim.launch.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/launch
+[0.951s] copying launch/bringup.launch.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/launch
+[0.951s] copying rviz/slam.rviz -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/rviz
+[0.951s] copying rviz/urdf_config.rviz -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/rviz
+[0.951s] copying rviz/lidar_scan.rviz -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/rviz
+[0.952s] copying rviz/urdf_config_wsl.rviz -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/rviz
+[0.952s] copying config/mapper_params_online_async.yaml -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/config
+[0.952s] running install_egg_info
+[0.954s] Copying ../../build/columbusmaximus/columbusmaximus.egg-info to /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages/columbusmaximus-0.0.0-py3.10.egg-info
+[0.955s] running install_scripts
+[0.972s] writing list of installed files to '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/install.log'
+[0.994s] Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/src/columbusmaximus' returned '0': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/columbusmaximus build --build-base /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/build install --record /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/install.log --install-scripts $base/lib/columbusmaximus --single-version-externally-managed install_data --force

@@ -1,0 +1,230 @@
+[0.073s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'uwb_tracker']
+[0.073s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['uwb_tracker'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7554d32d0e80>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7554d32d0910>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7554d32d0910>>)
+[0.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.170s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/durva/ros2_ws/src/Columbus-Maximus'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_bringup) by extension 'ignore'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_bringup) by extension 'ignore_ament_install'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_bringup) by extensions ['colcon_pkg']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_bringup) by extension 'colcon_pkg'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_bringup) by extensions ['colcon_meta']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_bringup) by extension 'colcon_meta'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_bringup) by extensions ['ros']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_bringup) by extension 'ros'
+[0.179s] DEBUG:colcon.colcon_core.package_identification:Package 'columbus_bringup' with type 'ros.ament_python' and name 'columbus_bringup'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_firmware) by extensions ['ignore', 'ignore_ament_install']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_firmware) by extension 'ignore'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_firmware) ignored
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_serial_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_serial_bridge) by extension 'ignore'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_serial_bridge) by extension 'ignore_ament_install'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_serial_bridge) by extensions ['colcon_pkg']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_serial_bridge) by extension 'colcon_pkg'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_serial_bridge) by extensions ['colcon_meta']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_serial_bridge) by extension 'colcon_meta'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_serial_bridge) by extensions ['ros']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_serial_bridge) by extension 'ros'
+[0.180s] DEBUG:colcon.colcon_core.package_identification:Package 'columbus_serial_bridge' with type 'ros.ament_python' and name 'columbus_serial_bridge'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_teleop) by extensions ['ignore', 'ignore_ament_install']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_teleop) by extension 'ignore'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_teleop) by extension 'ignore_ament_install'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_teleop) by extensions ['colcon_pkg']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_teleop) by extension 'colcon_pkg'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_teleop) by extensions ['colcon_meta']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_teleop) by extension 'colcon_meta'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_teleop) by extensions ['ros']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(columbus_teleop) by extension 'ros'
+[0.180s] DEBUG:colcon.colcon_core.package_identification:Package 'columbus_teleop' with type 'ros.ament_python' and name 'columbus_teleop'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extensions ['ignore', 'ignore_ament_install']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extension 'ignore'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extension 'ignore_ament_install'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extensions ['colcon_pkg']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extension 'colcon_pkg'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extensions ['colcon_meta']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extension 'colcon_meta'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extensions ['ros']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extension 'ros'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extensions ['cmake', 'python']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extension 'cmake'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extension 'python'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extensions ['python_setup_py']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus) by extension 'python_setup_py'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch) by extensions ['ignore', 'ignore_ament_install']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch) by extension 'ignore'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch) by extension 'ignore_ament_install'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch) by extensions ['colcon_pkg']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch) by extension 'colcon_pkg'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch) by extensions ['colcon_meta']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch) by extension 'colcon_meta'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch) by extensions ['ros']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch) by extension 'ros'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch) by extensions ['cmake', 'python']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch) by extension 'cmake'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch) by extension 'python'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch) by extensions ['python_setup_py']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch) by extension 'python_setup_py'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch/build) by extensions ['ignore', 'ignore_ament_install']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch/build) by extension 'ignore'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch/build) ignored
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch/install) by extensions ['ignore', 'ignore_ament_install']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch/install) by extension 'ignore'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch/install) ignored
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch/log) by extensions ['ignore', 'ignore_ament_install']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch/log) by extension 'ignore'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/columbusmaximus/launch/log) ignored
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(uwb) by extensions ['ignore', 'ignore_ament_install']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(uwb) by extension 'ignore'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(uwb) by extension 'ignore_ament_install'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(uwb) by extensions ['colcon_pkg']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(uwb) by extension 'colcon_pkg'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(uwb) by extensions ['colcon_meta']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(uwb) by extension 'colcon_meta'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(uwb) by extensions ['ros']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(uwb) by extension 'ros'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(uwb) by extensions ['cmake', 'python']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(uwb) by extension 'cmake'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(uwb) by extension 'python'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(uwb) by extensions ['python_setup_py']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(uwb) by extension 'python_setup_py'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/trilateration) by extensions ['ignore', 'ignore_ament_install']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/trilateration) by extension 'ignore'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/trilateration) by extension 'ignore_ament_install'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/trilateration) by extensions ['colcon_pkg']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/trilateration) by extension 'colcon_pkg'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/trilateration) by extensions ['colcon_meta']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/trilateration) by extension 'colcon_meta'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/trilateration) by extensions ['ros']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/trilateration) by extension 'ros'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/trilateration) by extensions ['cmake', 'python']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/trilateration) by extension 'cmake'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/trilateration) by extension 'python'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/trilateration) by extensions ['python_setup_py']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/trilateration) by extension 'python_setup_py'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/uwb_tracker) by extensions ['ignore', 'ignore_ament_install']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/uwb_tracker) by extension 'ignore'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/uwb_tracker) by extension 'ignore_ament_install'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/uwb_tracker) by extensions ['colcon_pkg']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/uwb_tracker) by extension 'colcon_pkg'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/uwb_tracker) by extensions ['colcon_meta']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/uwb_tracker) by extension 'colcon_meta'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/uwb_tracker) by extensions ['ros']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(uwb/uwb_tracker) by extension 'ros'
+[0.193s] DEBUG:colcon.colcon_core.package_identification:Package 'uwb/uwb_tracker' with type 'ros.ament_python' and name 'uwb_tracker'
+[0.193s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.193s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.193s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.193s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.193s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.206s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'columbus_bringup' in 'columbus_bringup'
+[0.206s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'columbus_serial_bridge' in 'columbus_serial_bridge'
+[0.206s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'columbus_teleop' in 'columbus_teleop'
+[0.207s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.207s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.207s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/durva/ros2_ws/src/Columbus-Maximus/columbus_serial_bridge/install
+[0.208s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/durva/ros2_ws/install
+[0.209s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 319 installed packages in /opt/ros/humble
+[0.218s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'uwb_tracker' build argument 'cmake_args' from command line to 'None'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'uwb_tracker' build argument 'cmake_target' from command line to 'None'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'uwb_tracker' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'uwb_tracker' build argument 'cmake_clean_cache' from command line to 'False'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'uwb_tracker' build argument 'cmake_clean_first' from command line to 'False'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'uwb_tracker' build argument 'cmake_force_configure' from command line to 'False'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'uwb_tracker' build argument 'ament_cmake_args' from command line to 'None'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'uwb_tracker' build argument 'catkin_cmake_args' from command line to 'None'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'uwb_tracker' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.243s] DEBUG:colcon.colcon_core.verb:Building package 'uwb_tracker' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker', 'merge_install': False, 'path': '/home/durva/ros2_ws/src/Columbus-Maximus/uwb/uwb_tracker', 'symlink_install': False, 'test_result_base': None}
+[0.243s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.244s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.244s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/durva/ros2_ws/src/Columbus-Maximus/uwb/uwb_tracker' with build type 'ament_python'
+[0.244s] Level 1:colcon.colcon_core.shell:create_environment_hook('uwb_tracker', 'ament_prefix_path')
+[0.245s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.245s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/uwb_tracker/hook/ament_prefix_path.ps1'
+[0.246s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/uwb_tracker/hook/ament_prefix_path.dsv'
+[0.246s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/uwb_tracker/hook/ament_prefix_path.sh'
+[0.247s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.247s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.406s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/durva/ros2_ws/src/Columbus-Maximus/uwb/uwb_tracker'
+[0.406s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.406s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.608s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: setopt, install_headers, rotate, register, build_scripts, dist_info, saveopts, symlink_data, easy_install, build_ext, alias, bdist_egg, bdist_rpm, check, bdist_wheel, build, install_data, upload, install_scripts, clean, bdist_dumb, develop, upload_docs, bdist, install, test, sdist, install_egg_info, egg_info, build_clib, build_py, install_lib
+[0.610s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/uwb/uwb_tracker': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/uwb_tracker build --build-base /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/build install --record /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/install.log --install-scripts $base/lib/uwb_tracker --single-version-externally-managed install_data
+[0.791s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/uwb/uwb_tracker' returned '0': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/uwb_tracker build --build-base /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/build install --record /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/install.log --install-scripts $base/lib/uwb_tracker --single-version-externally-managed install_data
+[0.792s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker' for CMake module files
+[0.793s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker' for CMake config files
+[0.793s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib'
+[0.793s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/bin'
+[0.793s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/pkgconfig/uwb_tracker.pc'
+[0.793s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/python3.10/site-packages'
+[0.793s] Level 1:colcon.colcon_core.shell:create_environment_hook('uwb_tracker', 'pythonpath')
+[0.793s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/uwb_tracker/hook/pythonpath.ps1'
+[0.794s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/uwb_tracker/hook/pythonpath.dsv'
+[0.794s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/uwb_tracker/hook/pythonpath.sh'
+[0.794s] Level 1:colcon.colcon_core.environment:checking '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/bin'
+[0.794s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(uwb_tracker)
+[0.795s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/uwb_tracker/package.ps1'
+[0.795s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/uwb_tracker/package.dsv'
+[0.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/uwb_tracker/package.sh'
+[0.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/uwb_tracker/package.bash'
+[0.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/uwb_tracker/package.zsh'
+[0.797s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/colcon-core/packages/uwb_tracker)
+[0.797s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[0.797s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[0.797s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[0.797s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.800s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.800s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.801s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[0.809s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[0.810s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/durva/ros2_ws/src/Columbus-Maximus/install/local_setup.ps1'
+[0.811s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/durva/ros2_ws/src/Columbus-Maximus/install/_local_setup_util_ps1.py'
+[0.812s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/durva/ros2_ws/src/Columbus-Maximus/install/setup.ps1'
+[0.813s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/durva/ros2_ws/src/Columbus-Maximus/install/local_setup.sh'
+[0.813s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/durva/ros2_ws/src/Columbus-Maximus/install/_local_setup_util_sh.py'
+[0.813s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/durva/ros2_ws/src/Columbus-Maximus/install/setup.sh'
+[0.814s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/durva/ros2_ws/src/Columbus-Maximus/install/local_setup.bash'
+[0.814s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/durva/ros2_ws/src/Columbus-Maximus/install/setup.bash'
+[0.815s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/durva/ros2_ws/src/Columbus-Maximus/install/local_setup.zsh'
+[0.815s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/durva/ros2_ws/src/Columbus-Maximus/install/setup.zsh'

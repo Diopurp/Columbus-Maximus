@@ -1,0 +1,133 @@
+[0.000000] (-) TimerEvent: {}
+[0.000277] (-) JobUnselected: {'identifier': 'columbus_serial_bridge'}
+[0.000326] (-) JobUnselected: {'identifier': 'columbus_teleop'}
+[0.000370] (-) JobUnselected: {'identifier': 'columbusmaximus'}
+[0.000389] (ld08_driver) JobQueued: {'identifier': 'ld08_driver', 'dependencies': OrderedDict()}
+[0.000410] (ld08_driver) JobStarted: {'identifier': 'ld08_driver'}
+[0.004858] (ld08_driver) JobProgress: {'identifier': 'ld08_driver', 'progress': 'cmake'}
+[0.005126] (ld08_driver) Command: {'cmd': ['/usr/bin/cmake', '/home/durva/ros2_ws/src/Columbus-Maximus/src/lidar_driver/ld08_driver', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver'], 'cwd': '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'durva'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/durva'), ('OLDPWD', '/home/durva/ros2_ws/src/Columbus-Maximus'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '6436'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/durva/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'durva'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'durva'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/durva/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/durva-IdeaPad-Gaming-3-15IHU6:@/tmp/.ICE-unix/2127,unix/durva-IdeaPad-Gaming-3-15IHU6:/tmp/.ICE-unix/2127'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/074d1c66_8fc4_496d_8b7f_81b05bc4bec8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/home/durva/ros2_ws/install/uwb_tracker:/home/durva/ros2_ws/install/columbus_teleop:/home/durva/ros2_ws/install/columbus_serial_bridge:/home/durva/ros2_ws/install/columbus_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/durva/ros2_ws/build/uwb_tracker:/home/durva/ros2_ws/install/uwb_tracker/lib/python3.10/site-packages:/home/durva/ros2_ws/install/columbus_teleop/lib/python3.10/site-packages:/home/durva/ros2_ws/install/columbus_serial_bridge/lib/python3.10/site-packages:/home/durva/ros2_ws/install/columbus_bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/durva/ros2_ws/install/uwb_tracker:/home/durva/ros2_ws/install/columbus_teleop:/home/durva/ros2_ws/install/columbus_serial_bridge:/home/durva/ros2_ws/install/columbus_bringup:/opt/ros/humble')]), 'shell': False}
+[0.042809] (ld08_driver) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.081801] (ld08_driver) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.086604] (ld08_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.099655] (-) TimerEvent: {}
+[0.131998] (ld08_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.136677] (ld08_driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.136836] (ld08_driver) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.137082] (ld08_driver) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.138990] (ld08_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.194765] (ld08_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.199684] (ld08_driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.199745] (-) TimerEvent: {}
+[0.199867] (ld08_driver) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.200177] (ld08_driver) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.201595] (ld08_driver) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.299935] (-) TimerEvent: {}
+[0.323625] (ld08_driver) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.380587] (ld08_driver) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.397233] (ld08_driver) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.400007] (-) TimerEvent: {}
+[0.431649] (ld08_driver) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.435667] (ld08_driver) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.443264] (ld08_driver) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.453726] (ld08_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.465819] (ld08_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.500117] (-) TimerEvent: {}
+[0.504148] (ld08_driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.506666] (ld08_driver) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.563237] (ld08_driver) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.580690] (ld08_driver) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.600231] (-) TimerEvent: {}
+[0.606459] (ld08_driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.612082] (ld08_driver) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.672850] (ld08_driver) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.673255] (ld08_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.700335] (-) TimerEvent: {}
+[0.720473] (ld08_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.721220] (ld08_driver) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.759608] (ld08_driver) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.791302] (ld08_driver) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system \n'}
+[0.800416] (-) TimerEvent: {}
+[0.842508] (ld08_driver) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.849912] (ld08_driver) StdoutLine: {'line': b'-- Generating done\n'}
+[0.852404] (ld08_driver) StdoutLine: {'line': b'-- Build files have been written to: /home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver\n'}
+[0.859991] (ld08_driver) CommandEnded: {'returncode': 0}
+[0.860478] (ld08_driver) JobProgress: {'identifier': 'ld08_driver', 'progress': 'build'}
+[0.861006] (ld08_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver', '--', '-j8', '-l8'], 'cwd': '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'durva'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/durva'), ('OLDPWD', '/home/durva/ros2_ws/src/Columbus-Maximus'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '6436'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/durva/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'durva'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'durva'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/durva/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/durva-IdeaPad-Gaming-3-15IHU6:@/tmp/.ICE-unix/2127,unix/durva-IdeaPad-Gaming-3-15IHU6:/tmp/.ICE-unix/2127'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/074d1c66_8fc4_496d_8b7f_81b05bc4bec8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/home/durva/ros2_ws/install/uwb_tracker:/home/durva/ros2_ws/install/columbus_teleop:/home/durva/ros2_ws/install/columbus_serial_bridge:/home/durva/ros2_ws/install/columbus_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/durva/ros2_ws/build/uwb_tracker:/home/durva/ros2_ws/install/uwb_tracker/lib/python3.10/site-packages:/home/durva/ros2_ws/install/columbus_teleop/lib/python3.10/site-packages:/home/durva/ros2_ws/install/columbus_serial_bridge/lib/python3.10/site-packages:/home/durva/ros2_ws/install/columbus_bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/durva/ros2_ws/install/uwb_tracker:/home/durva/ros2_ws/install/columbus_teleop:/home/durva/ros2_ws/install/columbus_serial_bridge:/home/durva/ros2_ws/install/columbus_bringup:/opt/ros/humble')]), 'shell': False}
+[0.894962] (ld08_driver) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/ld08_driver.dir/src/main.cpp.o\x1b[0m\n'}
+[0.895185] (ld08_driver) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/ld08_driver.dir/src/transform.cpp.o\x1b[0m\n'}
+[0.895262] (ld08_driver) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/ld08_driver.dir/src/cmd_interface_linux.cpp.o\x1b[0m\n'}
+[0.895676] (ld08_driver) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/ld08_driver.dir/src/lipkg.cpp.o\x1b[0m\n'}
+[0.896047] (ld08_driver) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/ld08_driver.dir/src/slbf.cpp.o\x1b[0m\n'}
+[0.900598] (-) TimerEvent: {}
+[1.000913] (-) TimerEvent: {}
+[1.101211] (-) TimerEvent: {}
+[1.201549] (-) TimerEvent: {}
+[1.301917] (-) TimerEvent: {}
+[1.402287] (-) TimerEvent: {}
+[1.502671] (-) TimerEvent: {}
+[1.603044] (-) TimerEvent: {}
+[1.703454] (-) TimerEvent: {}
+[1.803823] (-) TimerEvent: {}
+[1.904208] (-) TimerEvent: {}
+[2.004551] (-) TimerEvent: {}
+[2.104904] (-) TimerEvent: {}
+[2.205264] (-) TimerEvent: {}
+[2.313729] (-) TimerEvent: {}
+[2.414104] (-) TimerEvent: {}
+[2.514590] (-) TimerEvent: {}
+[2.615421] (-) TimerEvent: {}
+[2.716325] (-) TimerEvent: {}
+[2.817400] (-) TimerEvent: {}
+[2.920693] (-) TimerEvent: {}
+[3.024771] (-) TimerEvent: {}
+[3.126150] (-) TimerEvent: {}
+[3.228144] (-) TimerEvent: {}
+[3.330207] (-) TimerEvent: {}
+[3.431144] (-) TimerEvent: {}
+[3.541674] (-) TimerEvent: {}
+[3.662705] (-) TimerEvent: {}
+[3.775631] (-) TimerEvent: {}
+[3.879621] (-) TimerEvent: {}
+[3.980096] (-) TimerEvent: {}
+[4.080430] (-) TimerEvent: {}
+[4.180741] (-) TimerEvent: {}
+[4.281069] (-) TimerEvent: {}
+[4.381452] (-) TimerEvent: {}
+[4.481778] (-) TimerEvent: {}
+[4.582119] (-) TimerEvent: {}
+[4.682411] (-) TimerEvent: {}
+[4.782738] (-) TimerEvent: {}
+[4.883099] (-) TimerEvent: {}
+[4.951438] (ld08_driver) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable ld08_driver\x1b[0m\n'}
+[4.983201] (-) TimerEvent: {}
+[5.083594] (-) TimerEvent: {}
+[5.167519] (ld08_driver) StdoutLine: {'line': b'[100%] Built target ld08_driver\n'}
+[5.177460] (ld08_driver) CommandEnded: {'returncode': 0}
+[5.178259] (ld08_driver) JobProgress: {'identifier': 'ld08_driver', 'progress': 'install'}
+[5.183675] (-) TimerEvent: {}
+[5.184931] (ld08_driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver'], 'cwd': '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'durva'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/durva'), ('OLDPWD', '/home/durva/ros2_ws/src/Columbus-Maximus'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '6436'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/durva/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'durva'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'durva'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/durva/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/durva-IdeaPad-Gaming-3-15IHU6:@/tmp/.ICE-unix/2127,unix/durva-IdeaPad-Gaming-3-15IHU6:/tmp/.ICE-unix/2127'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/074d1c66_8fc4_496d_8b7f_81b05bc4bec8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '42'), ('AMENT_PREFIX_PATH', '/home/durva/ros2_ws/install/uwb_tracker:/home/durva/ros2_ws/install/columbus_teleop:/home/durva/ros2_ws/install/columbus_serial_bridge:/home/durva/ros2_ws/install/columbus_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/durva/ros2_ws/build/uwb_tracker:/home/durva/ros2_ws/install/uwb_tracker/lib/python3.10/site-packages:/home/durva/ros2_ws/install/columbus_teleop/lib/python3.10/site-packages:/home/durva/ros2_ws/install/columbus_serial_bridge/lib/python3.10/site-packages:/home/durva/ros2_ws/install/columbus_bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/durva/ros2_ws/install/uwb_tracker:/home/durva/ros2_ws/install/columbus_teleop:/home/durva/ros2_ws/install/columbus_serial_bridge:/home/durva/ros2_ws/install/columbus_bringup:/opt/ros/humble')]), 'shell': False}
+[5.190311] (ld08_driver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.190808] (ld08_driver) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[5.191213] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/launch/ld08.launch.py\n'}
+[5.197105] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/lib/ld08_driver/ld08_driver\n'}
+[5.202500] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ament_index/resource_index/package_run_dependencies/ld08_driver\n'}
+[5.207956] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ament_index/resource_index/parent_prefix_path/ld08_driver\n'}
+[5.216440] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/environment/ament_prefix_path.sh\n'}
+[5.222200] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/environment/ament_prefix_path.dsv\n'}
+[5.227629] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/environment/path.sh\n'}
+[5.233297] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/environment/path.dsv\n'}
+[5.238998] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/local_setup.bash\n'}
+[5.244387] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/local_setup.sh\n'}
+[5.249980] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/local_setup.zsh\n'}
+[5.255606] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/local_setup.dsv\n'}
+[5.261173] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/package.dsv\n'}
+[5.266916] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ament_index/resource_index/packages/ld08_driver\n'}
+[5.272716] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[5.278505] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[5.283777] (-) TimerEvent: {}
+[5.284263] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/cmake/ld08_driverConfig.cmake\n'}
+[5.289949] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/cmake/ld08_driverConfig-version.cmake\n'}
+[5.295767] (ld08_driver) StdoutLine: {'line': b'-- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/package.xml\n'}
+[5.303102] (ld08_driver) CommandEnded: {'returncode': 0}
+[5.327576] (ld08_driver) JobEnded: {'identifier': 'ld08_driver', 'rc': 0}
+[5.327990] (-) EventReactorShutdown: {}

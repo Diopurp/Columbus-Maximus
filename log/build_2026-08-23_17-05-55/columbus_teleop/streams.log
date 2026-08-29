@@ -1,0 +1,28 @@
+[1.197s] Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop/build --no-deps symlink_data
+[1.427s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[1.428s]   warnings.warn(
+[1.449s] running develop
+[1.548s] running egg_info
+[1.548s] creating columbus_teleop.egg-info
+[1.548s] writing columbus_teleop.egg-info/PKG-INFO
+[1.548s] writing dependency_links to columbus_teleop.egg-info/dependency_links.txt
+[1.548s] writing entry points to columbus_teleop.egg-info/entry_points.txt
+[1.549s] writing requirements to columbus_teleop.egg-info/requires.txt
+[1.549s] writing top-level names to columbus_teleop.egg-info/top_level.txt
+[1.549s] writing manifest file 'columbus_teleop.egg-info/SOURCES.txt'
+[1.550s] reading manifest file 'columbus_teleop.egg-info/SOURCES.txt'
+[1.551s] writing manifest file 'columbus_teleop.egg-info/SOURCES.txt'
+[1.552s] running build_ext
+[1.552s] Creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/lib/python3.10/site-packages/columbus-teleop.egg-link (link to .)
+[1.553s] Installing teleop_node script to /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/lib/columbus_teleop
+[1.553s] 
+[1.553s] Installed /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop
+[1.553s] running symlink_data
+[1.553s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/ament_index
+[1.553s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/ament_index/resource_index
+[1.553s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/ament_index/resource_index/packages
+[1.553s] symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop/resource/columbus_teleop -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/ament_index/resource_index/packages
+[1.554s] symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop/package.xml -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/columbus_teleop
+[1.554s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/columbus_teleop/launch
+[1.554s] symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop/launch/teleop_launch.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/columbus_teleop/launch
+[1.613s] Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop' returned '0': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop/build --no-deps symlink_data

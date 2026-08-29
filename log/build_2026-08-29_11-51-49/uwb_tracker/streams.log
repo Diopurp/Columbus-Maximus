@@ -1,0 +1,43 @@
+[0.366s] Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/uwb/uwb_tracker': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/uwb_tracker build --build-base /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/build install --record /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/install.log --install-scripts $base/lib/uwb_tracker --single-version-externally-managed install_data
+[0.504s] running egg_info
+[0.505s] creating ../../build/uwb_tracker/uwb_tracker.egg-info
+[0.505s] writing ../../build/uwb_tracker/uwb_tracker.egg-info/PKG-INFO
+[0.505s] writing dependency_links to ../../build/uwb_tracker/uwb_tracker.egg-info/dependency_links.txt
+[0.505s] writing entry points to ../../build/uwb_tracker/uwb_tracker.egg-info/entry_points.txt
+[0.505s] writing requirements to ../../build/uwb_tracker/uwb_tracker.egg-info/requires.txt
+[0.505s] writing top-level names to ../../build/uwb_tracker/uwb_tracker.egg-info/top_level.txt
+[0.505s] writing manifest file '../../build/uwb_tracker/uwb_tracker.egg-info/SOURCES.txt'
+[0.506s] reading manifest file '../../build/uwb_tracker/uwb_tracker.egg-info/SOURCES.txt'
+[0.506s] writing manifest file '../../build/uwb_tracker/uwb_tracker.egg-info/SOURCES.txt'
+[0.506s] running build
+[0.506s] running build_py
+[0.507s] creating /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/build
+[0.507s] creating /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/build/lib
+[0.507s] creating /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/build/lib/uwb_tracker
+[0.507s] copying uwb_tracker/uwb_node_rviz.py -> /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/build/lib/uwb_tracker
+[0.507s] copying uwb_tracker/uwb_node.py -> /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/build/lib/uwb_tracker
+[0.507s] copying uwb_tracker/__init__.py -> /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/build/lib/uwb_tracker
+[0.507s] running install
+[0.507s] running install_lib
+[0.508s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/python3.10/site-packages/uwb_tracker
+[0.508s] copying /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/build/lib/uwb_tracker/uwb_node_rviz.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/python3.10/site-packages/uwb_tracker
+[0.508s] copying /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/build/lib/uwb_tracker/uwb_node.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/python3.10/site-packages/uwb_tracker
+[0.508s] copying /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/build/lib/uwb_tracker/__init__.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/python3.10/site-packages/uwb_tracker
+[0.508s] byte-compiling /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/python3.10/site-packages/uwb_tracker/uwb_node_rviz.py to uwb_node_rviz.cpython-310.pyc
+[0.509s] byte-compiling /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/python3.10/site-packages/uwb_tracker/uwb_node.py to uwb_node.cpython-310.pyc
+[0.510s] byte-compiling /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/python3.10/site-packages/uwb_tracker/__init__.py to __init__.cpython-310.pyc
+[0.510s] running install_data
+[0.510s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/ament_index
+[0.510s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/ament_index/resource_index
+[0.510s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/ament_index/resource_index/packages
+[0.510s] copying resource/uwb_tracker -> /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/ament_index/resource_index/packages
+[0.510s] copying package.xml -> /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/uwb_tracker
+[0.510s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/uwb_tracker/config
+[0.511s] copying config/uwb_params.yaml -> /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/share/uwb_tracker/config
+[0.511s] running install_egg_info
+[0.512s] Copying ../../build/uwb_tracker/uwb_tracker.egg-info to /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/python3.10/site-packages/uwb_tracker-0.0.0-py3.10.egg-info
+[0.513s] running install_scripts
+[0.526s] Installing uwb_node script to /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/uwb_tracker
+[0.526s] Installing uwb_node_rviz script to /home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/uwb_tracker
+[0.526s] writing list of installed files to '/home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/install.log'
+[0.547s] Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/uwb/uwb_tracker' returned '0': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/uwb_tracker/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/uwb_tracker build --build-base /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/build install --record /home/durva/ros2_ws/src/Columbus-Maximus/build/uwb_tracker/install.log --install-scripts $base/lib/uwb_tracker --single-version-externally-managed install_data

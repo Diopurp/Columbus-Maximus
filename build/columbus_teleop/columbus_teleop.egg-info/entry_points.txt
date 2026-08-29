@@ -1,0 +1,3 @@
+[console_scripts]
+teleop_node = columbus_teleop.teleop_node:main
+

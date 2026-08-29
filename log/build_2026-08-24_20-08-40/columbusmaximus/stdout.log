@@ -1,0 +1,44 @@
+running develop
+Removing /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages/columbusmaximus.egg-link (link to .)
+running egg_info
+writing ../../build/columbusmaximus/columbusmaximus.egg-info/PKG-INFO
+writing dependency_links to ../../build/columbusmaximus/columbusmaximus.egg-info/dependency_links.txt
+writing entry points to ../../build/columbusmaximus/columbusmaximus.egg-info/entry_points.txt
+writing requirements to ../../build/columbusmaximus/columbusmaximus.egg-info/requires.txt
+writing top-level names to ../../build/columbusmaximus/columbusmaximus.egg-info/top_level.txt
+reading manifest file '../../build/columbusmaximus/columbusmaximus.egg-info/SOURCES.txt'
+writing manifest file '../../build/columbusmaximus/columbusmaximus.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/build
+creating /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/build/lib
+creating /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/build/lib/columbusmaximus
+copying columbusmaximus/__init__.py -> /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/build/lib/columbusmaximus
+running install
+running install_lib
+creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages/columbusmaximus
+copying /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/build/lib/columbusmaximus/__init__.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages/columbusmaximus
+byte-compiling /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages/columbusmaximus/__init__.py to __init__.cpython-310.pyc
+running install_data
+copying resource/columbusmaximus -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/ament_index/resource_index/packages
+copying package.xml -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus
+copying model.config -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus
+copying model.sdf -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus
+copying description/robot.urdf.xacro -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/description
+copying description/lidar.xacro -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/description
+copying description/robot_core.xacro -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/description
+copying description/gazebo_control.xacro -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/description
+copying meshes/Assembly_1.stl -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/meshes
+copying launch/slam.launch.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/launch
+copying launch/rsp.launch.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/launch
+copying launch/launch_sim.launch.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/launch
+copying launch/bringup.launch.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/launch
+copying rviz/slam.rviz -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/rviz
+copying rviz/urdf_config.rviz -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/rviz
+copying rviz/lidar_scan.rviz -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/rviz
+copying rviz/urdf_config_wsl.rviz -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/rviz
+copying config/mapper_params_online_async.yaml -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/share/columbusmaximus/config
+running install_egg_info
+Copying ../../build/columbusmaximus/columbusmaximus.egg-info to /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages/columbusmaximus-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/install.log'

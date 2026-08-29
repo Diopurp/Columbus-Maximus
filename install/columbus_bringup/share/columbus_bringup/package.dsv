@@ -1,0 +1,6 @@
+source;share/columbus_bringup/hook/pythonpath.ps1
+source;share/columbus_bringup/hook/pythonpath.dsv
+source;share/columbus_bringup/hook/pythonpath.sh
+source;share/columbus_bringup/hook/ament_prefix_path.ps1
+source;share/columbus_bringup/hook/ament_prefix_path.dsv
+source;share/columbus_bringup/hook/ament_prefix_path.sh

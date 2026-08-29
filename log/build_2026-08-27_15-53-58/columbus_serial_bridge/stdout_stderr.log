@@ -1,0 +1,27 @@
+running egg_info
+writing ../../build/columbus_serial_bridge/columbus_serial_bridge.egg-info/PKG-INFO
+writing dependency_links to ../../build/columbus_serial_bridge/columbus_serial_bridge.egg-info/dependency_links.txt
+writing entry points to ../../build/columbus_serial_bridge/columbus_serial_bridge.egg-info/entry_points.txt
+writing requirements to ../../build/columbus_serial_bridge/columbus_serial_bridge.egg-info/requires.txt
+writing top-level names to ../../build/columbus_serial_bridge/columbus_serial_bridge.egg-info/top_level.txt
+reading manifest file '../../build/columbus_serial_bridge/columbus_serial_bridge.egg-info/SOURCES.txt'
+writing manifest file '../../build/columbus_serial_bridge/columbus_serial_bridge.egg-info/SOURCES.txt'
+running build
+running build_py
+copying columbus_serial_bridge/odometry_node.py -> /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/build/lib/columbus_serial_bridge
+copying columbus_serial_bridge/hardware_interface_node.py -> /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/build/lib/columbus_serial_bridge
+running install
+running install_lib
+copying /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/build/lib/columbus_serial_bridge/odometry_node.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages/columbus_serial_bridge
+copying /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/build/lib/columbus_serial_bridge/hardware_interface_node.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages/columbus_serial_bridge
+byte-compiling /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages/columbus_serial_bridge/odometry_node.py to odometry_node.cpython-310.pyc
+byte-compiling /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages/columbus_serial_bridge/hardware_interface_node.py to hardware_interface_node.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages/columbus_serial_bridge-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/columbus_serial_bridge/columbus_serial_bridge.egg-info to /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages/columbus_serial_bridge-0.0.0-py3.10.egg-info
+running install_scripts
+Installing hardware_interface script to /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/columbus_serial_bridge
+Installing odometry_publisher script to /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/columbus_serial_bridge
+Installing serial_bridge script to /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/columbus_serial_bridge
+writing list of installed files to '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/install.log'

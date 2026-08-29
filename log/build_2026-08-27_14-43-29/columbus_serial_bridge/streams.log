@@ -1,0 +1,24 @@
+[0.384s] Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/src/columbus_serial_bridge': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/columbus_serial_bridge build --build-base /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/build install --record /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/install.log --install-scripts $base/lib/columbus_serial_bridge --single-version-externally-managed install_data
+[0.525s] running egg_info
+[0.525s] writing ../../build/columbus_serial_bridge/columbus_serial_bridge.egg-info/PKG-INFO
+[0.525s] writing dependency_links to ../../build/columbus_serial_bridge/columbus_serial_bridge.egg-info/dependency_links.txt
+[0.525s] writing entry points to ../../build/columbus_serial_bridge/columbus_serial_bridge.egg-info/entry_points.txt
+[0.525s] writing requirements to ../../build/columbus_serial_bridge/columbus_serial_bridge.egg-info/requires.txt
+[0.525s] writing top-level names to ../../build/columbus_serial_bridge/columbus_serial_bridge.egg-info/top_level.txt
+[0.526s] reading manifest file '../../build/columbus_serial_bridge/columbus_serial_bridge.egg-info/SOURCES.txt'
+[0.527s] writing manifest file '../../build/columbus_serial_bridge/columbus_serial_bridge.egg-info/SOURCES.txt'
+[0.527s] running build
+[0.527s] running build_py
+[0.527s] copying columbus_serial_bridge/serial_bridge.py -> /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/build/lib/columbus_serial_bridge
+[0.527s] running install
+[0.527s] running install_lib
+[0.528s] copying /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/build/lib/columbus_serial_bridge/serial_bridge.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages/columbus_serial_bridge
+[0.528s] byte-compiling /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages/columbus_serial_bridge/serial_bridge.py to serial_bridge.cpython-310.pyc
+[0.529s] running install_data
+[0.529s] running install_egg_info
+[0.531s] removing '/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages/columbus_serial_bridge-0.0.0-py3.10.egg-info' (and everything under it)
+[0.531s] Copying ../../build/columbus_serial_bridge/columbus_serial_bridge.egg-info to /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages/columbus_serial_bridge-0.0.0-py3.10.egg-info
+[0.532s] running install_scripts
+[0.546s] Installing serial_bridge script to /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/columbus_serial_bridge
+[0.546s] writing list of installed files to '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/install.log'
+[0.564s] Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/src/columbus_serial_bridge' returned '0': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/columbus_serial_bridge build --build-base /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/build install --record /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/install.log --install-scripts $base/lib/columbus_serial_bridge --single-version-externally-managed install_data

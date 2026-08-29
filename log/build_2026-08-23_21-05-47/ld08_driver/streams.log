@@ -1,0 +1,30 @@
+[0.010s] Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver': CMAKE_PREFIX_PATH=/home/durva/ros2_ws/install/uwb_tracker:/home/durva/ros2_ws/install/columbus_teleop:/home/durva/ros2_ws/install/columbus_serial_bridge:/home/durva/ros2_ws/install/columbus_bringup:/opt/ros/humble /usr/bin/cmake --build /home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver -- -j8 -l8
+[0.043s] [35m[1mConsolidate compiler generated dependencies of target ld08_driver[0m
+[0.061s] [ 16%] [32mBuilding CXX object CMakeFiles/ld08_driver.dir/src/lipkg.cpp.o[0m
+[0.061s] [ 33%] [32mBuilding CXX object CMakeFiles/ld08_driver.dir/src/main.cpp.o[0m
+[3.116s] [ 50%] [32m[1mLinking CXX executable ld08_driver[0m
+[3.294s] [100%] Built target ld08_driver
+[3.302s] Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver' returned '0': CMAKE_PREFIX_PATH=/home/durva/ros2_ws/install/uwb_tracker:/home/durva/ros2_ws/install/columbus_teleop:/home/durva/ros2_ws/install/columbus_serial_bridge:/home/durva/ros2_ws/install/columbus_bringup:/opt/ros/humble /usr/bin/cmake --build /home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver -- -j8 -l8
+[3.309s] Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver': CMAKE_PREFIX_PATH=/home/durva/ros2_ws/install/uwb_tracker:/home/durva/ros2_ws/install/columbus_teleop:/home/durva/ros2_ws/install/columbus_serial_bridge:/home/durva/ros2_ws/install/columbus_bringup:/opt/ros/humble /usr/bin/cmake --install /home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver
+[3.314s] -- Install configuration: ""
+[3.314s] -- Execute custom install script
+[3.314s] -- Up-to-date symlink: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/launch/ld08.launch.py
+[3.315s] -- Up-to-date symlink: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/lib/ld08_driver/ld08_driver
+[3.315s] -- Up-to-date symlink: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ament_index/resource_index/package_run_dependencies/ld08_driver
+[3.315s] -- Up-to-date symlink: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ament_index/resource_index/parent_prefix_path/ld08_driver
+[3.315s] -- Up-to-date symlink: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/environment/ament_prefix_path.sh
+[3.315s] -- Up-to-date symlink: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/environment/ament_prefix_path.dsv
+[3.316s] -- Up-to-date symlink: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/environment/path.sh
+[3.316s] -- Up-to-date symlink: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/environment/path.dsv
+[3.316s] -- Up-to-date symlink: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/local_setup.bash
+[3.316s] -- Up-to-date symlink: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/local_setup.sh
+[3.316s] -- Up-to-date symlink: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/local_setup.zsh
+[3.316s] -- Up-to-date symlink: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/local_setup.dsv
+[3.316s] -- Symlinking: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/package.dsv
+[3.322s] -- Up-to-date symlink: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ament_index/resource_index/packages/ld08_driver
+[3.322s] -- Up-to-date symlink: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.323s] -- Up-to-date symlink: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.323s] -- Up-to-date symlink: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/cmake/ld08_driverConfig.cmake
+[3.323s] -- Up-to-date symlink: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/cmake/ld08_driverConfig-version.cmake
+[3.323s] -- Up-to-date symlink: /home/durva/ros2_ws/src/Columbus-Maximus/install/ld08_driver/share/ld08_driver/package.xml
+[3.325s] Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver' returned '0': CMAKE_PREFIX_PATH=/home/durva/ros2_ws/install/uwb_tracker:/home/durva/ros2_ws/install/columbus_teleop:/home/durva/ros2_ws/install/columbus_serial_bridge:/home/durva/ros2_ws/install/columbus_bringup:/opt/ros/humble /usr/bin/cmake --install /home/durva/ros2_ws/src/Columbus-Maximus/build/ld08_driver

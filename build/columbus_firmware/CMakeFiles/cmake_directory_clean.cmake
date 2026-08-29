@@ -1,0 +1,11 @@
+file(REMOVE_RECURSE
+  "config/sdkconfig.h"
+  "config/sdkconfig.cmake"
+  "bootloader/bootloader.elf"
+  "bootloader/bootloader.bin"
+  "bootloader/bootloader.map"
+  "columbus_firmware.bin"
+  "flash_project_args"
+  "columbus_firmware.map"
+  "project_elf_src_esp32.c"
+)

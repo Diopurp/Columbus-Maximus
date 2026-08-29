@@ -1,0 +1,4 @@
+[console_scripts]
+uwb_node = uwb_tracker.uwb_node:main
+uwb_node_rviz = uwb_tracker.uwb_node_rviz:main
+

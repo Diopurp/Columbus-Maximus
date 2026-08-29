@@ -1,0 +1,6 @@
+source;share/uwb_tracker/hook/pythonpath.ps1
+source;share/uwb_tracker/hook/pythonpath.dsv
+source;share/uwb_tracker/hook/pythonpath.sh
+source;share/uwb_tracker/hook/ament_prefix_path.ps1
+source;share/uwb_tracker/hook/ament_prefix_path.dsv
+source;share/uwb_tracker/hook/ament_prefix_path.sh

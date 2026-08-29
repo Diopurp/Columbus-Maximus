@@ -1,0 +1,16 @@
+[0.973s] Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/build --no-deps symlink_data
+[1.145s] running develop
+[1.235s] running egg_info
+[1.235s] writing columbusmaximus.egg-info/PKG-INFO
+[1.235s] writing dependency_links to columbusmaximus.egg-info/dependency_links.txt
+[1.235s] writing entry points to columbusmaximus.egg-info/entry_points.txt
+[1.235s] writing requirements to columbusmaximus.egg-info/requires.txt
+[1.235s] writing top-level names to columbusmaximus.egg-info/top_level.txt
+[1.237s] reading manifest file 'columbusmaximus.egg-info/SOURCES.txt'
+[1.237s] writing manifest file 'columbusmaximus.egg-info/SOURCES.txt'
+[1.238s] running build_ext
+[1.239s] Creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages/columbusmaximus.egg-link (link to .)
+[1.239s] 
+[1.239s] Installed /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus
+[1.239s] running symlink_data
+[1.271s] Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus' returned '0': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbusmaximus/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/columbusmaximus/build --no-deps symlink_data

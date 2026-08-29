@@ -1,0 +1,17 @@
+[0.986s] Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/build --no-deps symlink_data
+[1.180s] running develop
+[1.273s] running egg_info
+[1.274s] writing columbus_serial_bridge.egg-info/PKG-INFO
+[1.274s] writing dependency_links to columbus_serial_bridge.egg-info/dependency_links.txt
+[1.274s] writing entry points to columbus_serial_bridge.egg-info/entry_points.txt
+[1.274s] writing requirements to columbus_serial_bridge.egg-info/requires.txt
+[1.274s] writing top-level names to columbus_serial_bridge.egg-info/top_level.txt
+[1.276s] reading manifest file 'columbus_serial_bridge.egg-info/SOURCES.txt'
+[1.276s] writing manifest file 'columbus_serial_bridge.egg-info/SOURCES.txt'
+[1.278s] running build_ext
+[1.278s] Creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages/columbus-serial-bridge.egg-link (link to .)
+[1.278s] Installing serial_bridge script to /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/columbus_serial_bridge
+[1.279s] 
+[1.279s] Installed /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge
+[1.279s] running symlink_data
+[1.307s] Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge' returned '0': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_serial_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_serial_bridge/build --no-deps symlink_data

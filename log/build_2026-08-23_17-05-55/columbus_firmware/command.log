@@ -1,0 +1,1 @@
+Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_firmware': /usr/bin/cmake /home/durva/ros2_ws/src/Columbus-Maximus/columbus_firmware -DCMAKE_INSTALL_PREFIX=/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_firmware

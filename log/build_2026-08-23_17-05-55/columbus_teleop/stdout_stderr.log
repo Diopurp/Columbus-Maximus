@@ -1,0 +1,26 @@
+/usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+running develop
+running egg_info
+creating columbus_teleop.egg-info
+writing columbus_teleop.egg-info/PKG-INFO
+writing dependency_links to columbus_teleop.egg-info/dependency_links.txt
+writing entry points to columbus_teleop.egg-info/entry_points.txt
+writing requirements to columbus_teleop.egg-info/requires.txt
+writing top-level names to columbus_teleop.egg-info/top_level.txt
+writing manifest file 'columbus_teleop.egg-info/SOURCES.txt'
+reading manifest file 'columbus_teleop.egg-info/SOURCES.txt'
+writing manifest file 'columbus_teleop.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/lib/python3.10/site-packages/columbus-teleop.egg-link (link to .)
+Installing teleop_node script to /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/lib/columbus_teleop
+
+Installed /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop
+running symlink_data
+creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/ament_index
+creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/ament_index/resource_index
+creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/ament_index/resource_index/packages
+symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop/resource/columbus_teleop -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/ament_index/resource_index/packages
+symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop/package.xml -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/columbus_teleop
+creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/columbus_teleop/launch
+symbolically linking /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_teleop/launch/teleop_launch.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_teleop/share/columbus_teleop/launch

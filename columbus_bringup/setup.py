@@ -1,8 +1,6 @@
 import os
 from setuptools import find_packages, setup
-
 package_name = 'columbus_bringup'
-
 setup(
     name=package_name,
     version='0.0.0',
@@ -12,6 +10,7 @@ setup(
         ['resource/' + package_name]),
     ('share/' + package_name, ['package.xml']),
     (os.path.join('share', package_name, 'launch'), ['launch/columbus_bringup_uwb_teleop.launch.py']),
+    (os.path.join('share', package_name, 'config'), ['config/ekf.yaml']),
 ],
     install_requires=['setuptools'],
     zip_safe=True,

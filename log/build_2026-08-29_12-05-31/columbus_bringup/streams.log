@@ -1,0 +1,37 @@
+[0.402s] Invoking command in '/home/durva/ros2_ws/src/Columbus-Maximus/columbus_bringup': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/columbus_bringup build --build-base /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/build install --record /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/install.log --install-scripts $base/lib/columbus_bringup --single-version-externally-managed install_data
+[0.549s] running egg_info
+[0.549s] creating ../build/columbus_bringup/columbus_bringup.egg-info
+[0.549s] writing ../build/columbus_bringup/columbus_bringup.egg-info/PKG-INFO
+[0.549s] writing dependency_links to ../build/columbus_bringup/columbus_bringup.egg-info/dependency_links.txt
+[0.549s] writing entry points to ../build/columbus_bringup/columbus_bringup.egg-info/entry_points.txt
+[0.550s] writing requirements to ../build/columbus_bringup/columbus_bringup.egg-info/requires.txt
+[0.550s] writing top-level names to ../build/columbus_bringup/columbus_bringup.egg-info/top_level.txt
+[0.550s] writing manifest file '../build/columbus_bringup/columbus_bringup.egg-info/SOURCES.txt'
+[0.551s] reading manifest file '../build/columbus_bringup/columbus_bringup.egg-info/SOURCES.txt'
+[0.551s] writing manifest file '../build/columbus_bringup/columbus_bringup.egg-info/SOURCES.txt'
+[0.551s] running build
+[0.551s] running build_py
+[0.551s] creating /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/build
+[0.551s] creating /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/build/lib
+[0.551s] creating /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/build/lib/columbus_bringup
+[0.551s] copying columbus_bringup/__init__.py -> /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/build/lib/columbus_bringup
+[0.551s] running install
+[0.551s] running install_lib
+[0.552s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/lib/python3.10/site-packages/columbus_bringup
+[0.552s] copying /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/build/lib/columbus_bringup/__init__.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/lib/python3.10/site-packages/columbus_bringup
+[0.552s] byte-compiling /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/lib/python3.10/site-packages/columbus_bringup/__init__.py to __init__.cpython-310.pyc
+[0.552s] running install_data
+[0.552s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/share/ament_index
+[0.553s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/share/ament_index/resource_index
+[0.553s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/share/ament_index/resource_index/packages
+[0.553s] copying resource/columbus_bringup -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/share/ament_index/resource_index/packages
+[0.553s] copying package.xml -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/share/columbus_bringup
+[0.553s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/share/columbus_bringup/launch
+[0.553s] copying launch/columbus_bringup_uwb_teleop.launch.py -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/share/columbus_bringup/launch
+[0.553s] creating /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/share/columbus_bringup/config
+[0.553s] copying config/ekf.yaml -> /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/share/columbus_bringup/config
+[0.553s] running install_egg_info
+[0.555s] Copying ../build/columbus_bringup/columbus_bringup.egg-info to /home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/lib/python3.10/site-packages/columbus_bringup-0.0.0-py3.10.egg-info
+[0.555s] running install_scripts
+[0.569s] writing list of installed files to '/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/install.log'
+[0.587s] Invoked command in '/home/durva/ros2_ws/src/Columbus-Maximus/columbus_bringup' returned '0': PYTHONPATH=/home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/durva/ros2_ws/src/Columbus-Maximus/install/columbus_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/columbus_bringup build --build-base /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/build install --record /home/durva/ros2_ws/src/Columbus-Maximus/build/columbus_bringup/install.log --install-scripts $base/lib/columbus_bringup --single-version-externally-managed install_data

@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: columbus-teleop
+Version: 1.0.0
+Summary: Custom keyboard teleoperation node for the Columbus Maximus differential drive robot. Publishes geometry_msgs/msg/Twist messages on /cmd_vel.
+Home-page: UNKNOWN
+Maintainer: Manas Hanwat
+Maintainer-email: manashanwat@gmail.com
+License: Apache-2.0
+Platform: UNKNOWN
+
+UNKNOWN
+
