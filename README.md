@@ -521,7 +521,7 @@ ros2 run tf2_ros tf2_echo odom base_link
 
 # Teleop Demo
 
-[141736-compressed.mp4](COLUMBUS%20MAXIMUS/141736-compressed.mp4)
+
 
 ## LiDAR
 
@@ -1207,7 +1207,8 @@ Output: `columbus_map.yaml` and `columbus_map.pgm`.
 
 # Slam map Of Hallway
 
-![SLAM-MAP.jpg](COLUMBUS%20MAXIMUS/SLAM-MAP.jpg)
+<img width="924" height="2000" alt="SLAM-MAP" src="https://github.com/user-attachments/assets/636509e4-769c-43f0-b51d-68f28c782f55" />
+
 
 ---
 
