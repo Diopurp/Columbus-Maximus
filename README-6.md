@@ -2,25 +2,9 @@
 
 **ROS 2 Mobile Robot Platform for Indoor SLAM, Navigation, Odometry & UWB Localization**
 
-![ROS 2 Humble](https://img.shields.io/badge/ROS_2-Humble-22314E?style=for-the-badge&logo=ros)
+![ROS 2 Humble](https://img.shields.io/badge/ROS_2-Humble-22314E?style=for-the-badge&logo=ros)  ![ESP32](https://img.shields.io/badge/ESP32-ESP--IDF-0E83CD?style=for-the-badge&logo=espressif) ![Python 3.10+](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)  ![C/C++](https://img.shields.io/badge/C%2FC%2B%2B-Firmware-00599C?style=for-the-badge&logo=cplusplus&logoColor=white) ![Gazebo](https://img.shields.io/badge/Gazebo-Simulation-orange?style=for-the-badge)
 
-![ESP32](https://img.shields.io/badge/ESP32-ESP--IDF-0E83CD?style=for-the-badge&logo=espressif)
-
-![Python 3.10+](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-
-![C/C++](https://img.shields.io/badge/C%2FC%2B%2B-Firmware-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-
-![Gazebo](https://img.shields.io/badge/Gazebo-Simulation-orange?style=for-the-badge)
-
-![RViz2](https://img.shields.io/badge/RViz2-Visualization-8A2BE2?style=for-the-badge)
-
-![GitHub stars](https://img.shields.io/github/stars/Diopurp/Columbus-Maximus?style=flat-square)
-
-![GitHub forks](https://img.shields.io/github/forks/Diopurp/Columbus-Maximus?style=flat-square)
-
-![Last commit](https://img.shields.io/github/last-commit/Diopurp/Columbus-Maximus?style=flat-square)
-
-![Repository size](https://img.shields.io/github/repo-size/Diopurp/Columbus-Maximus?style=flat-square)
+![GitHub stars](https://img.shields.io/github/stars/Diopurp/Columbus-Maximus?style=flat-square) ![GitHub forks](https://img.shields.io/github/forks/Diopurp/Columbus-Maximus?style=flat-square) ![Last commit](https://img.shields.io/github/last-commit/Diopurp/Columbus-Maximus?style=flat-square) ![Repository size](https://img.shields.io/github/repo-size/Diopurp/Columbus-Maximus?style=flat-square)
 
 ---
 
