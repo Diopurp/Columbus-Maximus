@@ -268,3 +268,14 @@ Full tutorial: [`uwb/README.md`](uwb/README.md)
 
 - [**ESP32 Firmware**](columbus_firmware/README.md) — motor control, encoder feedback, PID, odometry, build/flash workflow
 - [**Gazebo Simulation**](simulation/README.md) — simulated robot, SLAM mapping and Nav2 demos
+
+  ---
+### OUR TEAM
+  - Tejoshnanda Chilakalapudi - tejoshnanda.chilakalapudi@gmail.com
+  - Durva Sunil Sohani - sohanidurva@gmail.com
+  - Manas Hanwat - manashanwat@gmail.com
+### Mentors 
+  - Siddharth Mishra
+  - Vedant Malkar
+---
+SRA - Society of Robotics
